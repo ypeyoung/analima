@@ -9,12 +9,12 @@
   <meta property="og:title" content="Blog — Ana Lima Consultora" />
   <meta property="og:description" content="Conteúdos para posicionamento SEO em Cascais • Estoril • Beloura." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1200&auto=format&fit=crop" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop" />
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../assets/styles.css"/>
+  <link rel="icon" href="https://analimaconsultora.pt/wp-content/uploads/cropped-Ana_Lima-01-removebg-preview.png" sizes="any" />
 </head>
 <body>
   <header>
@@ -24,32 +24,109 @@
         <ul>
           <li><a href="../#home">Home</a></li>
           <li><a href="../#imoveis">Imóveis</a></li>
-          <li><a href="../#servicos">Serviços</a></li>
-          <li><a href="../#sobre">Sobre</a></li>
           <li><a href="./">Blog</a></li>
           <li><a href="../#contactos">Contactos</a></li>
         </ul>
       </nav>
+      <button class="btn menu-btn" aria-label="abrir menu">menu</button>
     </div>
   </header>
 
   <main class="container" style="padding:48px 0">
     <h1 style="font-family:'Cormorant Garamond',serif">Blog</h1>
-    <p class="sub">Conteúdos para posicionamento SEO em Cascais • Estoril • Beloura</p>
-    <section class="grid cols-3">
-      <a class="card" href="./angariacao-cascais.html"><div class="card-body"><h3 style="margin:0">Guia: Angariar Em Cascais</h3><p class="meta">02/10/2025 • 7 min</p></div></a>
-      <a class="card" href="./arrendamento-estoril-2025.html"><div class="card-body"><h3 style="margin:0">Arrendamento No Estoril (2025)</h3><p class="meta">02/10/2025 • 6 min</p></div></a>
-      <a class="card" href="./beloura-condominios.html"><div class="card-body"><h3 style="margin:0">Beloura: Condomínios E Valorização</h3><p class="meta">02/10/2025 • 5 min</p></div></a>
+    <p class="sub">Dicas práticas para proprietários e compradores — Cascais • Estoril • Beloura</p>
+
+    <section class="post-grid">
+      <!-- 1 -->
+      <a class="card post-card" href="./angariacao-cascais.html">
+        <div class="card-media">
+          <span class="tag">Angariação</span>
+          <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop" alt="Angariar em Cascais">
+        </div>
+        <div class="card-body">
+          <h3 style="margin:0">Como Angariar O Seu Imóvel Em Cascais — Guia Completo</h3>
+          <p class="meta">Estratégia • Avaliação • Marketing</p>
+          <p>Passo a passo para posicionar, promover e captar leads qualificadas — sem perder valor no processo.</p>
+          <span class="btn">Ler artigo</span>
+        </div>
+      </a>
+
+      <!-- 2 -->
+      <a class="card post-card" href="./arrendamento-estoril-2025.html">
+        <div class="card-media">
+          <span class="tag">Arrendamento</span>
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1200&auto=format&fit=crop" alt="Arrendamento no Estoril">
+        </div>
+        <div class="card-body">
+          <h3 style="margin:0">Arrendamento No Estoril: O Que Deve Saber Em 2025</h3>
+          <p class="meta">Procura • Rendas • Dicas</p>
+          <p>Mercado em alta concorrência: como preparar o imóvel e maximizar a taxa de ocupação.</p>
+          <span class="btn">Ler artigo</span>
+        </div>
+      </a>
+
+      <!-- 3 -->
+      <a class="card post-card" href="./beloura-condominios.html">
+        <div class="card-media">
+          <span class="tag">Zonas</span>
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop" alt="Beloura condomínios">
+        </div>
+        <div class="card-body">
+          <h3 style="margin:0">Beloura: Condomínios, Lifestyle E Valorização</h3>
+          <p class="meta">Qualidade de vida • Escolas • Segurança</p>
+          <p>Porque a Beloura é uma aposta sólida para viver e investir na zona de Sintra-Cascais.</p>
+          <span class="btn">Ler artigo</span>
+        </div>
+      </a>
+
+      <!-- 4 novo -->
+      <a class="card post-card" href="./guia-proprietario-cascais.html">
+        <div class="card-media">
+          <span class="tag">Proprietários</span>
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Guia do proprietário">
+        </div>
+        <div class="card-body">
+          <h3 style="margin:0">Guia Do Proprietário Em Cascais (2025)</h3>
+          <p class="meta">Documentos • Fiscalidade • Checklists</p>
+          <p>Checklist essencial para listar o imóvel com tranquilidade e ganhar tempo no fecho.</p>
+          <span class="btn">Ler artigo</span>
+        </div>
+      </a>
+
+      <!-- 5 novo -->
+      <a class="card post-card" href="./preparar-casa-fotos-visitas.html">
+        <div class="card-media">
+          <span class="tag">Home Staging</span>
+          <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?q=80&w=1200&auto=format&fit=crop" alt="Preparar a casa para fotos e visitas">
+        </div>
+        <div class="card-body">
+          <h3 style="margin:0">Como Preparar A Casa Para Fotos E Visitas</h3>
+          <p class="meta">Apresentação • Checklists</p>
+          <p>Pequenas melhorias que geram grandes resultados: luz, arrumação e narrativa visual.</p>
+          <span class="btn">Ler artigo</span>
+        </div>
+      </a>
+
+      <!-- 6 novo -->
+      <a class="card post-card" href="./vender-ou-arrendar-2025.html">
+        <div class="card-media">
+          <span class="tag">Estratégia</span>
+          <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Vender ou arrendar em 2025">
+        </div>
+        <div class="card-body">
+          <h3 style="margin:0">Vender Ou Arrendar Em 2025? Como Decidir</h3>
+          <p class="meta">Rentabilidade • Liquidez • Perfil</p>
+          <p>Quando faz sentido vender e quando faz mais sentido arrendar — com números e prós/contras.</p>
+          <span class="btn">Ler artigo</span>
+        </div>
+      </a>
     </section>
   </main>
 
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> Ana Lima Consultora — Blog</div>
-      <div class="social">
-        <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank">TikTok</a>
-        <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank">Instagram</a>
-      </div>
+      <div class="footer-credits">Desenvolvido por <a href="https://www.highlevelmkt.com" target="_blank" rel="noopener">High Level Marketing</a></div>
     </div>
   </footer>
 
