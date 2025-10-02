@@ -4,88 +4,42 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ana Lima Consultora | Imobiliário em Cascais</title>
-  <meta name="description" content="Consultoria imobiliária discreta e eficaz em Cascais. Compra, venda e arrendamento de imóveis com curadoria e negociação estratégica." />
-  <meta name="theme-color" content="#f7f5f2" />
+
+  <!-- SEO base -->
+  <meta name="description" content="Consultoria imobiliária em Cascais, Estoril e Beloura. Angariação premium, marketing de imóveis, avaliação e negociação — Ana Lima Consultora." />
+  <link rel="canonical" href="https://SEU_USUARIO.github.io/analima/" />
+  <meta property="og:title" content="Ana Lima Consultora — Imobiliário de Cascais" />
+  <meta property="og:description" content="Angariação e consultoria imobiliária de luxo em Cascais • Estoril • Beloura." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0b0b0b" />
+
+  <!-- Fonts + CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    :root{--bg:#f7f5f2;--ink:#0f0f0f;--muted:#9a938b;--gold:#c7b299;--ink-2:#2f2f2f;--radius:18px;--container:1200px;--shadow:0 10px 30px rgba(0,0,0,.06)}
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    img{max-width:100%;height:auto;display:block}
-    a{color:inherit;text-decoration:none}
-    .container{width:92%;max-width:var(--container);margin-inline:auto}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.2rem;border-radius:999px;border:1px solid var(--ink);background:#fff;color:var(--ink);transition:all .2s ease}
-    .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-    .btn.primary{background:var(--gold);border-color:var(--gold)}
-    .chip{display:inline-block;padding:.4rem .8rem;border:1px solid #ddd;border-radius:999px;font-size:.85rem;color:var(--ink-2)}
-    header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(180%) blur(6px);background:rgba(247,245,242,.8);border-bottom:1px solid #eee}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
-    .brand{font-family:"Cormorant Garamond",serif;font-weight:600;letter-spacing:.5px;font-size:1.4rem}
-    nav ul{display:flex;gap:1.2rem;list-style:none;padding:0;margin:0}
-    nav a{padding:.6rem .8rem;border-radius:999px}
-    nav a:hover{background:#fff;box-shadow:var(--shadow)}
-    @media (max-width:860px){nav ul{display:none}.menu-btn{display:inline-flex}}
-    .menu-btn{display:none}
-    .hero{position:relative;min-height:78vh;display:grid;place-items:center;--parallax:0px}
-    .hero::before{content:"";position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1976&auto=format&fit=crop') center/cover no-repeat;filter:contrast(1.05) saturate(1.05);transform:translateY(var(--parallax));will-change:transform}
-    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.20), rgba(0,0,0,.35))}
-    .hero-card{position:relative;z-index:2;backdrop-filter:blur(8px);background:rgba(255,255,255,.75);border:1px solid rgba(0,0,0,.06);border-radius:var(--radius);padding:2rem;width:min(680px,92%);box-shadow:var(--shadow)}
-    .eyebrow{font-size:.9rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
-    h1{font-family:"Cormorant Garamond",serif;font-size:clamp(2rem,4vw,3.2rem);line-height:1.05;margin:.5rem 0 1rem}
-    p.lead{font-size:1.05rem;color:#2a2a2a}
-    .hero-ctas{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem}
-    section{padding:64px 0}
-    h2{font-family:"Cormorant Garamond",serif;font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 18px}
-    .sub{color:var(--muted);margin-bottom:22px}
-    .grid{display:grid;gap:18px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    @media (max-width:1024px){.grid.cols-3{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:700px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
-    .card{background:#fff;border:1px solid #eee;border-radius:16px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.05);transition:transform .25s ease, box-shadow .25s ease}
-    .card-media{position:relative}
-    .badge{position:absolute;left:12px;top:12px;background:var(--gold);color:#fff;padding:.35rem .6rem;border-radius:999px;font-size:.75rem}
-    .card-body{padding:14px 14px 16px}
-    .price{font-weight:600}
-    .meta{color:#5a5a5a;font-size:.92rem}
-    .filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:14px}
-    .about{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
-    .about .photo{border-radius:16px;overflow:hidden}
-    @media (max-width:900px){.about{grid-template-columns:1fr}}
-    .testi{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
-    .quote{background:#fff;border:1px solid #eee;border-radius:16px;padding:18px;box-shadow:var(--shadow)}
-    @media (max-width:900px){.testi{grid-template-columns:1fr}}
-    form{display:grid;gap:12px}
-    input,select,textarea{width:100%;padding:12px 14px;border:1px solid #ddd;border-radius:12px;background:#fff;font:inherit}
-    textarea{min-height:120px}
-    footer{padding:28px 0 60px;border-top:1px solid #eee;color:#444}
-    .whatsapp{position:fixed;right:18px;bottom:18px;z-index:60}
-    .whatsapp a{display:flex;align-items:center;gap:.6rem;background:#25d366;color:#fff;padding:.8rem 1rem;border-radius:999px;box-shadow:var(--shadow)}
-    html{scroll-behavior:smooth}
-    .to-top{position:fixed;right:18px;bottom:78px;z-index:60;opacity:0;pointer-events:none;transition:opacity .2s ease}
-    .to-top.show{opacity:1;pointer-events:auto}
-    .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
-    .reveal.show{opacity:1;transform:translateY(0)}
-    .card:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(0,0,0,.08)}
-    .card-media img{transition:transform .4s ease}
-    .card:hover .card-media img{transform:scale(1.03)}
-    @media (max-width:860px){body.menu-open nav ul{display:flex;position:fixed;inset:64px 12px auto 12px;flex-direction:column;gap:.6rem;padding:12px;background:#fff;border:1px solid #eee;border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.12);z-index:60}}
-    @media (max-width:520px){.hero-card{padding:1.4rem}.btn{padding:.8rem 1rem}h1{font-size:clamp(1.8rem,8vw,2.6rem)}}
-  </style>
+  <link rel="stylesheet" href="assets/styles.css"/>
+
+  <!-- JSON-LD LocalBusiness -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"Organization",
+    "@type":"LocalBusiness",
     "name":"Ana Lima Consultora",
+    "areaServed":["Cascais","Estoril","Beloura"],
     "address":{
       "@type":"PostalAddress",
       "streetAddress":"Av. Gaspar Corte Real",
       "postalCode":"2750-164",
       "addressLocality":"Cascais",
       "addressCountry":"PT"
-    }
+    },
+    "url":"https://SEU_USUARIO.github.io/analima/",
+    "sameAs":[
+      "https://www.tiktok.com/@analimaconsultora",
+      "https://www.instagram.com/analimaconsultora.pt"
+    ]
   }
   </script>
 </head>
@@ -99,31 +53,43 @@
           <li><a href="#imoveis">Imóveis</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#video">Vídeo</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a href="blog/">Blog</a></li>
           <li><a href="#contactos">Contactos</a></li>
         </ul>
       </nav>
-      <a class="btn primary" href="#contactos" data-track="cta_header">Fale No WhatsApp</a>
-      <button class="btn menu-btn" aria-label="abrir menu">menu</button>
+      <div class="social">
+        <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank" aria-label="TikTok">TikTok</a>
+        <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank" aria-label="Instagram">Instagram</a>
+        <button class="btn ghost" id="themeToggle" type="button">🌙 Dark</button>
+        <button class="btn menu-btn" aria-label="abrir menu">menu</button>
+      </div>
     </div>
   </header>
 
+  <!-- HERO com vídeo cinematográfico (YouTube BG) -->
   <main id="home" class="hero">
+    <iframe id="ytbg"
+      src="https://www.youtube.com/embed/cZu-4nE2fuo?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=cZu-4nE2fuo&modestbranding=1&iv_load_policy=3&rel=0&enablejsapi=1"
+      title="Vídeo Apresentativo Imobiliária" frameborder="0"
+      allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+
     <div class="hero-card container reveal">
       <div class="eyebrow">Cascais • Estoril • Beloura</div>
       <h1>Cascais, Com Chave De Ouro</h1>
-      <p class="lead">Consultoria imobiliária discreta e eficaz para quem procura viver bem. Curadoria de imóveis, negociação estratégica e acompanhamento total.</p>
+      <p class="lead">Consultoria imobiliária discreta e eficaz focada em <strong>angariação</strong> e venda com estratégia. Curadoria, marketing de alto impacto e negociação firme.</p>
       <div class="hero-ctas">
-        <a class="btn primary" href="#imoveis" data-track="cta_hero_ver_imoveis">Ver Imóveis</a>
-        <a class="btn" href="#contactos" data-track="cta_hero_contacto">Pedir Avaliação Gratuita</a>
+        <a class="btn primary" href="#contactos" data-track="cta_hero_captacao">Quero Avaliar O Meu Imóvel</a>
+        <a class="btn" href="#imoveis" data-track="cta_hero_ver_imoveis">Ver Imóveis</a>
+        <button id="muteToggle" class="btn" type="button" aria-pressed="true">🔇 Sem Som</button>
       </div>
     </div>
   </main>
 
-  <section id="imoveis" class="container reveal">
+  <!-- LISTA DE IMÓVEIS (carrega de imoveis.json) -->
+  <section id="imoveis" class="container reveal alt">
     <h2>Imóveis Em Destaque</h2>
-    <p class="sub">Seleção Curada Nas Melhores Zonas De Cascais E Estoril</p>
+    <p class="sub">Seleção curada nas melhores zonas de Cascais e Estoril</p>
+
     <div class="filters">
       <button class="btn" data-filter="all">Todos</button>
       <button class="btn" data-filter="cascais">Cascais</button>
@@ -138,172 +104,37 @@
     </div>
 
     <div class="grid cols-3" id="cards">
-      <!-- MORADIA T4 EM ADROANA – ALCABIDECHE -->
-      <article class="card" data-zona="alcabideche" data-tipo="t4 moradia" data-preco="340000">
-        <div class="card-media">
-          <span class="badge">Por Recuperar</span>
-          <img loading="lazy" src="https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P27451464/Tphoto/ID48e0a201-0000-0500-0000-0000162e0e5d.jpg" alt="Moradia T4 em Adroana, Alcabideche"/>
-        </div>
-        <div class="card-body">
-          <div class="price">€ 340.000 • Moradia T4</div>
-          <div class="meta">Adroana, Alcabideche • 169,6 m² • Terreno 315 m²</div>
-          <div style="margin-top:12px; display:flex; gap:.6rem">
-            <a class="btn" href="#" data-track="view_property">Ver Detalhes</a>
-            <a class="btn primary" href="#contactos" data-track="agendar_visita">Agendar Visita</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- HABITACIONAL/ESPAÇO COMERCIAL EM CASCAIS – Estúdio T1 -->
-      <article class="card" data-zona="cascais" data-tipo="t1 comercial" data-preco="390000">
-        <div class="card-media">
-          <img loading="lazy" src="https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26603765/Tphoto/IDf5f09501-0000-0500-0000-000015223544.jpg" alt="Espaço Comercial/Habitacional em Cascais"/>
-        </div>
-        <div class="card-body">
-          <div class="price">€ 390.000 • Estúdio/Comercial 220 m²</div>
-          <div class="meta">Cascais e Estoril • Usado • Área Bruta 220 m²</div>
-          <div style="margin-top:12px; display:flex; gap:.6rem">
-            <a class="btn" href="#" data-track="view_property">Ver Detalhes</a>
-            <a class="btn primary" href="#contactos" data-track="agendar_visita">Agendar Visita</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Moradia T3 térrea em Alcabideche -->
-      <article class="card" data-zona="alcabideche" data-tipo="t3 moradia" data-preco="1100000">
-        <div class="card-media">
-          <img loading="lazy" src="https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25439715/Tphoto/IDe32d8401-0000-0500-0000-000014008308.jpg" alt="Moradia T3 térrea em Alcabideche"/>
-        </div>
-        <div class="card-body">
-          <div class="price">€ 1.100.000 • Moradia T3 Térrea</div>
-          <div class="meta">Alcabideche • 171 m² úteis • Terreno 1.418 m²</div>
-          <div style="margin-top:12px; display:flex; gap:.6rem">
-            <a class="btn" href="#" data-track="view_property">Ver Detalhes</a>
-            <a class="btn primary" href="#contactos" data-track="agendar_visita">Agendar Visita</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- ARRECADAÇÃO 25 m² – Beloura -->
-      <article class="card" data-zona="beloura" data-tipo="arrecadacao" data-preco="29000">
-        <div class="card-media">
-          <img loading="lazy" src="https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26803355/Tphoto/ID9bfc9801-0000-0500-0000-0000156002b3.jpg" alt="Arrecadação 25 m² na Beloura"/>
-        </div>
-        <div class="card-body">
-          <div class="price">€ 29.000 • Arrecadação 25 m²</div>
-          <div class="meta">Beloura • Segurança 24h • Centro Comercial</div>
-          <div style="margin-top:12px; display:flex; gap:.6rem">
-            <a class="btn" href="#" data-track="view_property">Ver Detalhes</a>
-            <a class="btn primary" href="#contactos" data-track="agendar_visita">Agendar Visita</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- T2 venda -->
-      <article class="card" data-zona="alcabideche" data-tipo="t2 apartamento" data-preco="570000">
-        <div class="card-media">
-          <img loading="lazy" src="https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25522766/Tphoto/ID4e728501-0000-0500-0000-000015c0ecb7.jpg" alt="Apartamento T2 Amoreira com piscina"/>
-        </div>
-        <div class="card-body">
-          <div class="price">€ 570.000 • Apartamento T2</div>
-          <div class="meta">Amoreira, Alcabideche • Condomínio com piscina</div>
-          <div style="margin-top:12px; display:flex; gap:.6rem">
-            <a class="btn" href="#" data-track="view_property">Ver Detalhes</a>
-            <a class="btn primary" href="#contactos" data-track="agendar_visita">Agendar Visita</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- T2 arrendamento -->
-      <article class="card" data-zona="alcabideche" data-tipo="t2 apartamento" data-preco="2300">
-        <div class="card-media">
-          <img loading="lazy" src="https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25522542/Tphoto/ID6e718501-0000-0500-0000-000015c0ec4a.jpg" alt="Apartamento T2 Amoreira arrendamento"/>
-        </div>
-        <div class="card-body">
-          <div class="price">€ 2.300/mês • Apartamento T2</div>
-          <div class="meta">Amoreira, Alcabideche • Condomínio com piscina</div>
-          <div style="margin-top:12px; display:flex; gap:.6rem">
-            <a class="btn" href="#" data-track="view_property">Ver Detalhes</a>
-            <a class="btn primary" href="#contactos" data-track="agendar_visita">Agendar Visita</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- T3 Splendid Beloura -->
-      <article class="card" data-zona="beloura" data-tipo="t3 apartamento" data-preco="1190000">
-        <div class="card-media">
-          <img loading="lazy" src="https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P27220216/Tphoto/IDf8589f01-0000-0500-0000-000015e37f5f.jpg" alt="Apartamento T3 Splendid Beloura"/>
-        </div>
-        <div class="card-body">
-          <div class="price">€ 1.190.000 • Apartamento T3 + Jardim</div>
-          <div class="meta">Beloura • 406 m² bruta • Renovado</div>
-          <div style="margin-top:12px; display:flex; gap:.6rem">
-            <a class="btn" href="#" data-track="view_property">Ver Detalhes</a>
-            <a class="btn primary" href="#contactos" data-track="agendar_visita">Agendar Visita</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- T3+1 Duplex Lugares de Byron -->
-      <article class="card" data-zona="beloura" data-tipo="t3 apartamento" data-preco="850000">
-        <div class="card-media">
-          <img loading="lazy" src="https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26802560/Tphoto/ID80f99801-0000-0500-0000-0000155cf85f.jpg" alt="T3+1 Duplex Lugares de Byron, Beloura"/>
-        </div>
-        <div class="card-body">
-          <div class="price">€ 850.000 • T3+1 Duplex</div>
-          <div class="meta">Beloura • 241 m² bruta • Renovado</div>
-          <div style="margin-top:12px; display:flex; gap:.6rem">
-            <a class="btn" href="#" data-track="view_property">Ver Detalhes</a>
-            <a class="btn primary" href="#contactos" data-track="agendar_visita">Agendar Visita</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Terreno -->
-      <article class="card" data-zona="alcabideche" data-tipo="terreno" data-preco="6000000">
-        <div class="card-media">
-          <img loading="lazy" src="https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26905420/Tphoto/ID4c8b9a01-0000-0500-0000-0000157e1b09.jpg" alt="Terreno Alcabideche"/>
-        </div>
-        <div class="card-body">
-          <div class="price">€ 6.000.000 • Terreno 10.680 m²</div>
-          <div class="meta">Alcabideche • Comércio e serviços</div>
-          <div style="margin-top:12px; display:flex; gap:.6rem">
-            <a class="btn" href="#" data-track="view_property">Ver Detalhes</a>
-            <a class="btn primary" href="#contactos" data-track="agendar_visita">Agendar Visita</a>
-          </div>
-        </div>
-      </article>
+      <article class="card reveal"><div class="card-body"><div class="meta">A carregar imóveis…</div></div></article>
     </div>
   </section>
 
+  <!-- SERVIÇOS (angariação primeiro) -->
   <section id="servicos" class="container reveal">
-    <h2>Serviços</h2>
-    <p class="sub">Acompanho Proprietários E Compradores Do Início Ao Fim</p>
+    <h2>Serviços Para Angariação</h2>
+    <p class="sub">Maximizamos o valor do seu imóvel e encurtamos o tempo de venda</p>
+
     <div class="grid cols-2">
       <div class="card"><div class="card-body">
-        <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-size:1.4rem">Para Proprietários</h3>
-        <p>Avaliação rigorosa, fotografia profissional, divulgação segmentada e negociação estratégica, com reporte transparente em cada etapa.</p>
+        <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-size:1.4rem">Plano De Angariação Premium</h3>
         <ul>
-          <li>Avaliação gratuita e posicionamento de preço</li>
-          <li>Plano de marketing premium (fotos, vídeo e drone)</li>
-          <li>Gestão de visitas e qualificação de interessados</li>
+          <li>Avaliação detalhada e estudo comparativo em Cascais/Estoril/Beloura</li>
+          <li>Produção de conteúdo: fotos editoriais, vídeo e <em>drone</em></li>
+          <li>Landing dedicada com tráfego pago segmentado</li>
+          <li>Gestão de leads e <em>follow-up</em> com CRM</li>
         </ul>
-        <a class="btn primary" href="#contactos" data-track="lead_proprietario">Pedir Avaliação</a>
+        <a class="btn primary" href="#contactos" data-track="lead_captacao">Quero Angariar O Meu Imóvel</a>
       </div></div>
+
       <div class="card"><div class="card-body">
         <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-size:1.4rem">Para Compradores</h3>
-        <p>Curadoria de oportunidades em Cascais, visitas acompanhadas e due diligence simples para uma decisão segura.</p>
-        <ul>
-          <li>Briefing rápido para entender o que procura</li>
-          <li>Seleção de imóveis e visitas guiadas</li>
-          <li>Apoio na negociação e documentação</li>
-        </ul>
+        <p>Curadoria de oportunidades, visitas acompanhadas e due diligence simples para uma decisão segura.</p>
         <a class="btn" href="#contactos" data-track="lead_comprador">Falar Comigo</a>
       </div></div>
     </div>
   </section>
 
-  <section id="sobre" class="container reveal">
+  <!-- SOBRE -->
+  <section id="sobre" class="container reveal alt">
     <div class="about">
       <div class="photo">
         <div class="grid cols-3">
@@ -314,9 +145,8 @@
       </div>
       <div>
         <h2>Sobre A Ana</h2>
-        <p class="sub">Mais Do Que Transações, Relações De Confiança</p>
-        <p>Sou consultora imobiliária focada em Cascais, Estoril e Beloura. Trabalho com curadoria de imóveis, comunicação clara e negociação firme, sempre com discrição e atenção ao detalhe.</p>
-        <p>Cada angariação recebe um plano de marketing sob medida: fotografia de autor, vídeo, drone e presença digital otimizada para atrair o comprador certo.</p>
+        <p class="sub">Mais do que transações, relações de confiança</p>
+        <p>Consultoria imobiliária discreta e eficaz nas zonas de Cascais, Estoril e Beloura. Estratégia, comunicação clara e negociação firme.</p>
         <div style="margin-top:10px; display:flex; gap:.6rem; flex-wrap:wrap">
           <span class="chip">Cascais</span>
           <span class="chip">Estoril</span>
@@ -327,44 +157,21 @@
     </div>
   </section>
 
+  <!-- VÍDEO -->
   <section id="video" class="container reveal">
     <h2>Vídeo Apresentativo</h2>
     <p class="sub">Conheça o nosso posicionamento e a forma de trabalhar</p>
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08)">
-      <iframe src="https://www.youtube.com/embed/cZu-4nE2fuo" title="Vídeo Apresentativo Imobiliária" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.45)">
+      <iframe src="https://www.youtube.com/embed/cZu-4nE2fuo" title="Vídeo Apresentativo Imobiliária" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
     </div>
   </section>
 
-  <section id="blog" class="container reveal">
-    <h2>No Blog</h2>
-    <div class="grid cols-3">
-      <article class="card">
-        <div class="card-body">
-          <h3 style="margin-top:0; font-size:1.1rem">Guia Do Comprador Em Cascais</h3>
-          <p>Custos, zonas e passos essenciais para comprar com segurança.</p>
-          <a class="btn" href="#">Ler Artigo</a>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-body">
-          <h3 style="margin-top:0; font-size:1.1rem">Vender Com Discrição</h3>
-          <p>Como maximizar valor e proteger a privacidade da sua família.</p>
-          <a class="btn" href="#">Ler Artigo</a>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-body">
-          <h3 style="margin-top:0; font-size:1.1rem">As Melhores Zonas</h3>
-          <p>Cascais, Estoril e Beloura: o que muda entre elas.</p>
-          <a class="btn" href="#">Ler Artigo</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="contactos" class="container reveal">
+  <!-- CONTACTOS -->
+  <section id="contactos" class="container reveal alt">
     <h2>Contactos</h2>
-    <p class="sub">Fale Comigo — Resposta Rápida</p>
+    <p class="sub">Fale comigo — resposta rápida</p>
     <div class="grid cols-2">
       <div class="card"><div class="card-body">
         <form id="lead" action="#" method="post" data-track="form_submit">
@@ -372,8 +179,9 @@
           <input name="email" type="email" placeholder="Email" required />
           <input name="telefone" placeholder="Telefone" />
           <select name="assunto">
-            <option value="comprar">Quero comprar</option>
+            <option value="angariar">Quero angariar</option>
             <option value="vender">Quero vender</option>
+            <option value="comprar">Quero comprar</option>
             <option value="arrendar">Quero arrendar</option>
           </select>
           <textarea name="mensagem" placeholder="Mensagem"></textarea>
@@ -384,15 +192,22 @@
         <p><strong>Telefone</strong><br> ☎ +351 962 823 794</p>
         <p><strong>Email</strong><br> 🖨 analima@afinest.pt</p>
         <p><strong>Morada</strong><br> Av. Gaspar Corte Real, 2750-164, Cascais, Portugal</p>
-        <div style="margin-top:12px"><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Av.+Gaspar+Corte+Real%2C+2750-164%2C+Cascais" target="_blank">Ver No Mapa</a></div>
+        <div style="margin:12px 0" class="social">
+          <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank" aria-label="TikTok">TikTok</a>
+          <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank" aria-label="Instagram">Instagram</a>
+        </div>
+        <div><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Av.+Gaspar+Corte+Real%2C+2750-164%2C+Cascais" target="_blank">Ver No Mapa</a></div>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="container" style="display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap">
-      <div>© <span id="year"></span> Ana Lima Consultora • Av. Gaspar Corte Real, 2750-164, Cascais, Portugal</div>
-      <div style="color:#777">Privacidade • Cookies</div>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Ana Lima Consultora • Av. Gaspar Corte Real, 2750-164, Cascais</div>
+      <div class="social">
+        <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank" aria-label="TikTok">TikTok</a>
+        <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank" aria-label="Instagram">Instagram</a>
+      </div>
     </div>
   </footer>
 
@@ -401,70 +216,6 @@
     <a href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20vi%20o%20site%20e%20quero%20falar" target="_blank" rel="noopener" data-track="whatsapp_click">WhatsApp</a>
   </div>
 
-  <script>
-    // Ano
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Smooth scroll extra para navegadores antigos
-    document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-      anchor.addEventListener('click', function(e){
-        const id = this.getAttribute('href');
-        if(id.length>1){
-          e.preventDefault();
-          document.querySelector(id).scrollIntoView({behavior:'smooth'});
-        }
-      })
-    });
-
-    // Filtragem de cards (UMA única declaração p/ evitar erro)
-    const buttons = document.querySelectorAll('[data-filter]');
-    const cards = document.querySelectorAll('#cards .card');
-    buttons.forEach(btn=>btn.addEventListener('click',()=>{
-      const f = btn.getAttribute('data-filter');
-      cards.forEach(c=>{
-        if(f==='all'){ c.style.display='block'; return; }
-        const zona = c.getAttribute('data-zona') || '';
-        const tipo = c.getAttribute('data-tipo') || '';
-        c.style.display = (zona.includes(f) || tipo.includes(f)) ? 'block' : 'none';
-      });
-    }));
-
-    // Botão voltar ao topo + parallax
-    const toTop = document.getElementById('toTop');
-    window.addEventListener('scroll',()=>{
-      if(window.scrollY>600){ toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
-      const hero = document.querySelector('.hero');
-      const y = window.scrollY * 0.12;
-      hero.style.setProperty('--parallax', y+'px');
-    });
-    toTop.addEventListener('click',()=> window.scrollTo({top:0, behavior:'smooth'}));
-
-    // Interseção para revelar elementos
-    const revealables = document.querySelectorAll('section, .card, .hero-card');
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); } });
-    },{threshold:.12});
-    revealables.forEach(el=>{ el.classList.add('reveal'); io.observe(el); });
-
-    // Menu mobile
-    const menuBtn = document.querySelector('.menu-btn');
-    if(menuBtn){ menuBtn.addEventListener('click',()=> document.body.classList.toggle('menu-open')); }
-
-    // Stub de tracking para GTM push
-    document.querySelectorAll('[data-track]').forEach(el=>{
-      el.addEventListener('click',()=>{
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({event:'custom_event', action: el.getAttribute('data-track')});
-      });
-    });
-
-    // Form fake submit
-    document.getElementById('lead').addEventListener('submit', function(e){
-      e.preventDefault();
-      alert('Formulário enviado. Em produção, integrar com email/CRM.');
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({event:'generate_lead'});
-    });
-  </script>
+  <script src="assets/app.js"></script>
 </body>
 </html>
