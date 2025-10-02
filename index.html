@@ -3,33 +3,43 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ana Lima Consultora | Imobiliário em Cascais</title>
+  <meta name="robots" content="index,follow"/>
+  <title>Ana Lima Consultora | Imobiliário em Cascais (Angariação • Estoril • Beloura)</title>
 
   <!-- SEO base -->
-  <meta name="description" content="Consultoria imobiliária em Cascais, Estoril e Beloura. Angariação premium, marketing de imóveis, avaliação e negociação — Ana Lima Consultora." />
+  <meta name="description" content="Consultoria imobiliária em Cascais, Estoril e Beloura. Foco em angariação e venda com estratégia, marketing premium e negociação. Avalie o seu imóvel em 48h." />
   <link rel="canonical" href="https://ypeyoung.github.io/analima/" />
-  <meta property="og:title" content="Ana Lima Consultora — Imobiliário de Cascais" />
-  <meta property="og:description" content="Angariação e consultoria imobiliária de luxo em Cascais • Estoril • Beloura." />
+  <meta name="theme-color" content="#f3efe7" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Ana Lima Consultora — Imobiliário em Cascais (Angariação)" />
+  <meta property="og:description" content="Angariação premium com avaliação em 48h. Cascais • Estoril • Beloura." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ypeyoung.github.io/analima/" />
   <meta property="og:image" content="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1200&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#f3efe7" />
 
   <!-- Favicon -->
   <link rel="icon" href="https://analimaconsultora.pt/wp-content/uploads/cropped-Ana_Lima-01-removebg-preview.png" sizes="any" />
 
-  <!-- Fonts + CSS -->
+  <!-- Performance hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="dns-prefetch" href="//images.unsplash.com"/>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1600&auto=format&fit=crop" imagesrcset="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1600&auto=format&fit=crop 1600w, https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1200&auto=format&fit=crop 1200w" imagesizes="100vw" />
+
+  <!-- Fonts + CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/styles.css"/>
 
-  <!-- Schema.org -->
+  <!-- Schema.org (LocalBusiness + WebSite) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"LocalBusiness",
     "name":"Ana Lima Consultora",
+    "description":"Consultoria e angariação imobiliária em Cascais, Estoril e Beloura.",
+    "image":"https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1200&auto=format&fit=crop",
     "areaServed":["Cascais","Estoril","Beloura"],
     "address":{
       "@type":"PostalAddress",
@@ -38,8 +48,26 @@
       "addressLocality":"Cascais",
       "addressCountry":"PT"
     },
+    "telephone":"+351962823794",
     "url":"https://ypeyoung.github.io/analima/",
-    "sameAs":["https://www.tiktok.com/@analimaconsultora","https://www.instagram.com/analimaconsultora.pt"]
+    "sameAs":[
+      "https://www.tiktok.com/@analimaconsultora",
+      "https://www.instagram.com/analimaconsultora.pt"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Ana Lima Consultora",
+    "url":"https://ypeyoung.github.io/analima/",
+    "inLanguage":"pt-PT",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://ypeyoung.github.io/analima/blog/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
   }
   </script>
 </head>
@@ -51,6 +79,7 @@
       <nav aria-label="principal">
         <ul>
           <li><a href="#home">Home</a></li>
+          <li><a href="landing/avaliar-imovel.html">Avaliar Imóvel</a></li>
           <li><a href="#imoveis">Imóveis</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#sobre">Sobre</a></li>
@@ -69,7 +98,7 @@
       <h1>Cascais, Com Chave De Ouro</h1>
       <p class="lead">Consultoria imobiliária discreta e eficaz focada em <strong>angariação</strong> e venda com estratégia. Curadoria, marketing de alto impacto e negociação firme.</p>
       <div class="hero-ctas">
-        <a class="btn primary" href="#contactos" data-track="cta_hero_captacao">Quero Avaliar O Meu Imóvel</a>
+        <a class="btn primary" href="landing/avaliar-imovel.html?utm_source=site&utm_medium=internal&utm_campaign=lp_avaliacao_home" data-track="cta_hero_avaliar">Avaliar O Meu Imóvel</a>
         <a class="btn" href="blog/" data-track="cta_hero_blog">Ler O Blog</a>
         <a class="btn" href="#imoveis" data-track="cta_hero_ver_imoveis">Ver Imóveis</a>
       </div>
@@ -93,7 +122,7 @@
     <h2>Imóveis Em Destaque</h2>
     <p class="sub">Seleção curada nas melhores zonas de Cascais e Estoril</p>
 
-    <div class="filters">
+    <div class="filters" aria-label="filtros de imóveis">
       <button class="btn" data-filter="all">Todos</button>
       <button class="btn" data-filter="cascais">Cascais</button>
       <button class="btn" data-filter="estoril">Estoril</button>
@@ -106,12 +135,16 @@
       <button class="btn" data-filter="apartamento">Apartamento</button>
     </div>
 
-    <div class="grid cols-3" id="cards">
+    <div class="grid cols-3" id="cards" aria-live="polite">
       <article class="card reveal"><div class="card-body"><div class="meta">A carregar imóveis…</div></div></article>
     </div>
 
-    <div class="cta-center">
-      <a class="btn xl" href="blog/" data-track="cta_listings_blog">Dicas De Mercado No Blog</a>
+    <!-- CTA Blog e Avaliar Imóvel -->
+    <div class="cta-center" style="margin-top:10px">
+      <a class="btn xl" href="landing/avaliar-imovel.html?utm_source=site&utm_medium=internal&utm_campaign=lp_avaliacao_mid" data-track="cta_destaques_avaliar">Avaliar O Meu Imóvel Em 48h</a>
+    </div>
+    <div class="cta-center" style="margin-top:10px">
+      <a class="btn" href="blog/" data-track="cta_listings_blog">Dicas De Mercado No Blog</a>
     </div>
   </section>
 
@@ -130,7 +163,7 @@
             <li>Landing dedicada + tráfego pago segmentado</li>
             <li>Gestão de leads e follow-up com CRM</li>
           </ul>
-          <a class="btn primary" href="#contactos" data-track="lead_captacao">Quero Angariar O Meu Imóvel</a>
+          <a class="btn primary" href="landing/avaliar-imovel.html?utm_source=site&utm_medium=internal&utm_campaign=lp_avaliacao_servicos" data-track="lead_captacao">Quero Angariar O Meu Imóvel</a>
         </div>
       </article>
 
@@ -175,6 +208,7 @@
         <p class="sub">Mais do que transações, relações de confiança</p>
         <p>Sou consultora imobiliária focada em Cascais, Estoril e Beloura. Trabalho com curadoria de imóveis, comunicação clara e negociação firme, sempre com discrição e atenção ao detalhe.</p>
         <div class="chips">
+          <a class="btn ghost" href="landing/avaliar-imovel.html?utm_source=site&utm_medium=internal&utm_campaign=lp_avaliacao_sobre">Avaliar Imóvel</a>
           <span class="btn ghost">Cascais</span>
           <span class="btn ghost">Estoril</span>
           <span class="btn ghost">Beloura</span>
@@ -242,7 +276,11 @@
               <div class="field full"><label>Mensagem</label><textarea name="mensagem" rows="5" placeholder="Como posso ajudar?"></textarea></div>
             </div>
 
-            <button class="btn primary" type="submit">Enviar</button>
+            <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:8px">
+              <button class="btn primary" type="submit">Enviar</button>
+              <a class="btn" href="landing/avaliar-imovel.html?utm_source=site&utm_medium=internal&utm_campaign=lp_avaliacao_contactos" data-track="contactos_avaliar">Avaliar Imóvel</a>
+              <a class="btn" href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20quero%20falar" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
           </form>
         </div>
       </div>
@@ -276,12 +314,12 @@
   </section>
 
   <!-- FOOTER -->
- <footer>
-  <div class="container footer-inner">
-    <div>© <span id="year"></span> Ana Lima Consultora • Av. Gaspar Corte Real, 2750-164, Cascais</div>
-    <div class="footer-credits">Desenvolvido por <a href="https://www.highlevelmkt.com" target="_blank" rel="noopener">High Level Marketing</a></div>
-  </div>
-</footer>
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Ana Lima Consultora • Av. Gaspar Corte Real, 2750-164, Cascais</div>
+      <div class="footer-credits">Desenvolvido por <a href="https://www.highlevelmkt.com" target="_blank" rel="noopener">High Level Marketing</a></div>
+    </div>
+  </footer>
 
   <!-- Ações flutuantes -->
   <button class="btn to-top" id="toTop" aria-label="voltar ao topo">↑ Topo</button>
