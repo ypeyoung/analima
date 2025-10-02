@@ -1,19 +1,21 @@
+/* Quiet Luxury — BEGE EM TUDO + responsividade + form bonito */
 :root{
-  --bg:#f7f5f2;           /* fundo da página */
-  --bg-alt:#f7f5f2;       /* AGORA IGUAL ao fundo da página */
-  --panel:#ffffff;        /* cartões */
-  --ink:#111111;
-  --ink-2:#2a2a2a;
-  --muted:#6f6a64;
-  --muted-2:#8b857f;
-  --gold:#c7b299;
-  --ring:rgba(17,17,17,.10);
+  --beige:#f3efe7;        /* cor única do site */
+  --bg:var(--beige);
+  --bg-alt:var(--beige);  /* containers com a MESMA cor */
+  --panel:var(--beige);   /* cartões também bege (sem “caixas brancas”) */
+  --ink:#171614;
+  --ink-2:#3b3936;
+  --muted:#7b756f;
+  --muted-2:#958f88;
+  --gold:#c7b299;         /* acento */
+  --ring:rgba(0,0,0,.10);
   --radius:18px;
   --container:1200px;
-  --shadow:0 14px 36px rgba(0,0,0,.10);
+  --shadow:0 14px 36px rgba(0,0,0,.08);
 }
 
-/* Reset */
+/* Reset básico */
 *,*::before,*::after{box-sizing:border-box}
 html,body{margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
 a{color:inherit; text-decoration:none}
@@ -21,14 +23,14 @@ img{max-width:100%; height:auto; display:block}
 .container{width:92%; max-width:var(--container); margin-inline:auto}
 
 /* Botões */
-.btn{display:inline-flex; align-items:center; justify-content:center; gap:.6rem; padding:.85rem 1.15rem; border-radius:999px; border:1px solid var(--ink); background:transparent; color:var(--ink); transition:all .2s ease}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:.6rem; padding:.9rem 1.15rem; border-radius:999px; border:1px solid rgba(0,0,0,.5); background:transparent; color:var(--ink); transition:all .2s ease}
 .btn:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
 .btn.primary{background:var(--gold); color:#1b1b1b; border-color:var(--gold)}
 .btn.ghost{background:transparent; border:1px solid var(--ring)}
 .btn.xl{padding:1rem 1.4rem; font-weight:600}
 
 /* Header */
-header{position:sticky; top:0; z-index:30; backdrop-filter:saturate(160%) blur(6px); background:rgba(255,255,255,.75); border-bottom:1px solid var(--ring)}
+header{position:sticky; top:0; z-index:30; backdrop-filter:saturate(160%) blur(6px); background:rgba(243,239,231,.75); border-bottom:1px solid var(--ring)}
 .nav{display:flex; align-items:center; justify-content:space-between; padding:.8rem 0}
 .brand{font-family:"Cormorant Garamond",serif; font-weight:600; letter-spacing:.5px; font-size:1.3rem}
 nav ul{display:flex; gap:1.2rem; list-style:none; padding:0; margin:0}
@@ -37,20 +39,18 @@ nav a:hover{background:rgba(0,0,0,.05)}
 .menu-btn{display:none}
 @media (max-width:860px){nav ul{display:none} .menu-btn{display:inline-flex}}
 
-/* Hero com imagem */
-.hero{position:relative; min-height:68vh; display:grid; place-items:center; overflow:hidden; background:var(--bg)}
+/* HERO COM IMAGEM */
+.hero{position:relative; min-height:68vh; display:grid; place-items:center; overflow:hidden; background:var(--bg); margin:0}
 .hero-image::before{
   content:""; position:absolute; inset:0;
-  background-image: var(--hero-img), linear-gradient(180deg,#ffffff, #f7f5f2);
-  background-size: cover, auto;
-  background-position: center, center;
-  background-repeat: no-repeat, no-repeat;
-  filter: saturate(105%);
+  background-image: var(--hero-img);
+  background-size: cover; background-position: center; filter:saturate(105%);
   z-index:0;
 }
 .hero-image::after{
+  /* véu claro para legibilidade + termina exatamente no bege */
   content:""; position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(247,245,242,.95) 65%);
+  background:linear-gradient(180deg, rgba(243,239,231,.70) 0%, rgba(243,239,231,.92) 70%, var(--beige) 100%);
   z-index:1;
 }
 .hero-card{position:relative; z-index:2; text-align:center; width:min(820px,92%)}
@@ -59,8 +59,9 @@ h1{font-family:"Cormorant Garamond",serif; font-size:clamp(2rem,5vw,3.6rem); lin
 p.lead{font-size:1.06rem; color:var(--ink-2)}
 .hero-ctas{display:flex; gap:.8rem; flex-wrap:wrap; margin-top:1.2rem; justify-content:center}
 
-/* Secções e grelhas */
-section{padding:72px 0; background:var(--bg-alt)}
+/* Secções e grelhas (mesma cor do fundo) */
+section{padding:64px 0; background:var(--bg-alt); margin:0}
+section.flush{padding-top:0}          /* cola a secção anterior (usado no vídeo) */
 h2{font-family:"Cormorant Garamond",serif; font-size:clamp(1.6rem,3vw,2.3rem); margin:0 0 18px}
 .sub{color:var(--muted-2); margin-bottom:22px}
 .grid{display:grid; gap:18px}
@@ -69,14 +70,14 @@ h2{font-family:"Cormorant Garamond",serif; font-size:clamp(1.6rem,3vw,2.3rem); m
 @media (max-width:1024px){.grid.cols-3{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:720px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
 
-/* Vídeo responsivo */
-.video-wrap{position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px; box-shadow:var(--shadow); background:#ddd}
+/* VÍDEO 16:9 responsivo */
+.video-wrap{position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px; box-shadow:var(--shadow); background:var(--beige)}
 .video-wrap iframe{position:absolute; top:0; left:0; width:100%; height:100%}
 
-/* Cards */
+/* CARDS (mesma cor do fundo, só com borda/sombra) */
 .card{background:var(--panel); border:1px solid var(--ring); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); transition:transform .25s ease, box-shadow .25s ease}
 .card:hover{transform:translateY(-4px)}
-.card-media{position:relative; aspect-ratio:16/10; background:#eae7e3}
+.card-media{position:relative; aspect-ratio:16/10; background:#e0dbd3}
 .card-media img{width:100%; height:100%; object-fit:cover; transition:transform .45s ease}
 .card:hover .card-media img{transform:scale(1.03)}
 .badge{position:absolute; left:12px; top:12px; background:var(--gold); color:#121212; padding:.35rem .6rem; border-radius:999px; font-size:.75rem; font-weight:600}
@@ -84,28 +85,35 @@ h2{font-family:"Cormorant Garamond",serif; font-size:clamp(1.6rem,3vw,2.3rem); m
 .price{font-weight:600}
 .meta{color:var(--muted); font-size:.92rem}
 
-/* Filtros / chips */
+/* Filtros */
 .filters{display:flex; gap:.6rem; flex-wrap:wrap; margin-bottom:14px}
 .filters .btn{border-color:var(--ring)}
 
-/* CTA centralizada */
+/* CTA central */
 .cta-center{display:flex; justify-content:center; margin-top:16px}
 
-/* Sobre */
+/* SOBRE */
 .about{display:grid; grid-template-columns:1.1fr .9fr; gap:28px}
 .about .photo{border-radius:16px; overflow:hidden}
 .chips{margin-top:10px; display:flex; gap:.6rem; flex-wrap:wrap}
 @media (max-width:900px){.about{grid-template-columns:1fr}}
 
-/* Form */
-.form .fields{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+/* FORM — bonito no desktop também */
+form, .form{width:100%}
+.form .fields{display:grid; grid-template-columns:1fr 1fr; gap:14px}
 .form .field{display:flex; flex-direction:column; gap:6px}
 .form .field.full{grid-column:1/-1}
 .form label{font-size:.9rem; color:var(--muted)}
+/* força estilo mesmo se a classe falhar */
+form input, form select, form textarea,
 .form input, .form select, .form textarea{
-  width:100%; padding:.85rem 1rem; border-radius:12px; border:1px solid var(--ring); background:#fff; color:var(--ink);
+  width:100%; padding:1rem 1rem; border-radius:12px;
+  border:1px solid var(--ring); background:rgba(255,255,255,.75); color:var(--ink);
+  font-size:1rem;
 }
-.form input:focus, .form select:focus, .form textarea:focus{outline:none; border-color:#c9c4bd; box-shadow:0 0 0 3px rgba(199,178,153,.18)}
+form input:focus, form select:focus, form textarea:focus{
+  outline:none; border-color:#c9c4bd; box-shadow:0 0 0 3px rgba(199,178,153,.18)
+}
 @media (max-width:720px){.form .fields{grid-template-columns:1fr}}
 
 /* Mapa */
@@ -113,11 +121,11 @@ h2{font-family:"Cormorant Garamond",serif; font-size:clamp(1.6rem,3vw,2.3rem); m
 .map-wrap iframe{width:100%; height:300px; display:block}
 
 /* Social icons */
-.icon{display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:999px; border:1px solid var(--ring); background:#fff; color:#111; margin-right:8px; transition:transform .2s ease, box-shadow .2s ease}
+.icon{display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:999px; border:1px solid var(--ring); background:rgba(255,255,255,.75); color:#111; margin-right:8px; transition:transform .2s ease, box-shadow .2s ease}
 .icon:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
 
-/* Footer e ações */
-footer{padding:28px 0 60px; border-top:1px solid var(--ring); color:#4e4e4e; background:#ffffff}
+/* Footer e ações (também bege) */
+footer{padding:28px 0 60px; border-top:1px solid var(--ring); color:#4e4e4e; background:var(--beige)}
 .footer-inner{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:center}
 .whatsapp{position:fixed; right:18px; bottom:18px; z-index:60}
 .whatsapp a{display:flex; align-items:center; gap:.6rem; background:#25d366; color:#fff; padding:.8rem 1rem; border-radius:999px; box-shadow:var(--shadow)}
@@ -125,6 +133,6 @@ html{scroll-behavior:smooth}
 .to-top{position:fixed; right:18px; bottom:78px; z-index:60; opacity:0; pointer-events:none; transition:opacity .2s ease}
 .to-top.show{opacity:1; pointer-events:auto}
 
-/* Animações suaves */
+/* Entradas de animação */
 .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
