@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ypeyoung.github.io/analima/sitemap.xml
