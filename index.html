@@ -15,6 +15,9 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#f7f5f2" />
 
+  <!-- Favicon -->
+  <link rel="icon" href="https://analimaconsultora.pt/wp-content/uploads/cropped-Ana_Lima-01-removebg-preview.png" sizes="any" />
+
   <!-- Fonts + CSS -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -73,22 +76,20 @@
     </div>
   </main>
 
-  <!-- Vídeo Apresentativo (responsivo) -->
+  <!-- Vídeo (apenas o player, autoplay) -->
   <section id="video" class="container reveal">
-    <h2>Vídeo Apresentativo</h2>
-    <p class="sub">Conheça o nosso posicionamento e a forma de trabalhar</p>
     <div class="video-wrap">
       <iframe
-        src="https://www.youtube.com/embed/cZu-4nE2fuo?autoplay=0&mute=0&controls=1&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3"
+        src="https://www.youtube.com/embed/cZu-4nE2fuo?autoplay=1&mute=1&controls=1&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3"
         title="Vídeo Apresentativo Imobiliária"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
     </div>
   </section>
 
   <!-- Imóveis -->
-  <section id="imoveis" class="container reveal alt">
+  <section id="imoveis" class="container reveal">
     <h2>Imóveis Em Destaque</h2>
     <p class="sub">Seleção curada nas melhores zonas de Cascais e Estoril</p>
 
@@ -109,50 +110,58 @@
       <article class="card reveal"><div class="card-body"><div class="meta">A carregar imóveis…</div></div></article>
     </div>
 
-    <div style="margin-top:16px">
-      <a class="btn" href="blog/" data-track="cta_listings_blog">Dicas De Mercado No Blog</a>
+    <div class="cta-center">
+      <a class="btn xl" href="blog/" data-track="cta_listings_blog">Dicas De Mercado No Blog</a>
     </div>
   </section>
 
-  <!-- Serviços com SPOILERS -->
+  <!-- Serviços (3 cartões abertos) -->
   <section id="servicos" class="container reveal">
     <h2>Serviços</h2>
     <p class="sub">Acompanho proprietários e compradores do início ao fim</p>
 
-    <details class="spoiler">
-      <summary>Plano De Angariação Premium</summary>
-      <div style="margin-top:10px">
-        <ul>
-          <li>Avaliação detalhada e estudo comparativo em Cascais/Estoril/Beloura</li>
-          <li>Produção de conteúdo: fotos editoriais, vídeo e <em>drone</em></li>
-          <li>Landing dedicada com tráfego pago segmentado</li>
-          <li>Gestão de leads e <em>follow-up</em> com CRM</li>
-        </ul>
-        <a class="btn primary" href="#contactos" data-track="lead_captacao">Quero Angariar O Meu Imóvel</a>
-      </div>
-    </details>
+    <div class="grid cols-3">
+      <article class="card">
+        <div class="card-body">
+          <h3 style="margin-top:0">Plano De Angariação Premium</h3>
+          <ul>
+            <li>Avaliação e estudo comparativo (Cascais/Estoril/Beloura)</li>
+            <li>Fotos editoriais, vídeo e <em>drone</em></li>
+            <li>Landing dedicada + tráfego pago segmentado</li>
+            <li>Gestão de leads e follow-up com CRM</li>
+          </ul>
+          <a class="btn primary" href="#contactos" data-track="lead_captacao">Quero Angariar O Meu Imóvel</a>
+        </div>
+      </article>
 
-    <details class="spoiler">
-      <summary>Para Proprietários — Vender/Arrendar</summary>
-      <div style="margin-top:10px">
-        Avaliação, posicionamento, produção de conteúdo, visitas e negociação com total transparência.
-      </div>
-    </details>
+      <article class="card">
+        <div class="card-body">
+          <h3 style="margin-top:0">Para Proprietários — Vender/Arrendar</h3>
+          <ul>
+            <li>Posicionamento de preço e preparação do imóvel</li>
+            <li>Visitas qualificadas e negociação profissional</li>
+            <li>Relatórios de desempenho semanais</li>
+          </ul>
+          <a class="btn" href="blog/angariacao-cascais.html">Ver Estratégia</a>
+        </div>
+      </article>
 
-    <details class="spoiler">
-      <summary>Para Compradores</summary>
-      <div style="margin-top:10px">
-        Curadoria de oportunidades, visitas acompanhadas e due diligence simples para uma decisão segura.
-      </div>
-    </details>
-
-    <div style="margin-top:16px">
-      <a class="btn" href="blog/" data-track="cta_servicos_blog">Ler Estratégias No Blog</a>
+      <article class="card">
+        <div class="card-body">
+          <h3 style="margin-top:0">Para Compradores</h3>
+          <ul>
+            <li>Curadoria de oportunidades por perfil</li>
+            <li>Visitas acompanhadas e due diligence simples</li>
+            <li>Fecho com máxima segurança</li>
+          </ul>
+          <a class="btn" href="#contactos">Quero Ser Acompanhado</a>
+        </div>
+      </article>
     </div>
   </section>
 
   <!-- Sobre -->
-  <section id="sobre" class="container reveal alt">
+  <section id="sobre" class="container reveal">
     <div class="about">
       <div class="photo">
         <div class="grid cols-3">
@@ -165,7 +174,7 @@
         <h2>Sobre A Ana</h2>
         <p class="sub">Mais do que transações, relações de confiança</p>
         <p>Sou consultora imobiliária focada em Cascais, Estoril e Beloura. Trabalho com curadoria de imóveis, comunicação clara e negociação firme, sempre com discrição e atenção ao detalhe.</p>
-        <div style="margin-top:10px; display:flex; gap:.6rem; flex-wrap:wrap">
+        <div class="chips">
           <span class="btn ghost">Cascais</span>
           <span class="btn ghost">Estoril</span>
           <span class="btn ghost">Beloura</span>
@@ -202,35 +211,66 @@
   </section>
 
   <!-- Contactos -->
-  <section id="contactos" class="container reveal alt">
+  <section id="contactos" class="container reveal">
     <h2>Contactos</h2>
     <p class="sub">Fale comigo — resposta rápida</p>
+
     <div class="grid cols-2">
-      <div class="card"><div class="card-body">
-        <form id="lead" action="#" method="post" data-track="form_submit">
-          <input name="nome" placeholder="Nome" required />
-          <input name="email" type="email" placeholder="Email" required />
-          <input name="telefone" placeholder="Telefone" />
-          <select name="assunto">
-            <option value="angariar">Quero angariar</option>
-            <option value="vender">Quero vender</option>
-            <option value="comprar">Quero comprar</option>
-            <option value="arrendar">Quero arrendar</option>
-          </select>
-          <textarea name="mensagem" placeholder="Mensagem"></textarea>
-          <button class="btn primary" type="submit">Enviar</button>
-        </form>
-      </div></div>
-      <div>
-        <p><strong>Telefone</strong><br> ☎ +351 962 823 794</p>
-        <p><strong>Email</strong><br> 🖨 analima@afinest.pt</p>
-        <p><strong>Morada</strong><br> Av. Gaspar Corte Real, 2750-164, Cascais, Portugal</p>
-        <div style="margin:12px 0; display:flex; gap:.6rem; flex-wrap:wrap">
-          <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank">TikTok</a>
-          <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank">Instagram</a>
-          <a class="btn" href="blog/">Ir Para O Blog</a>
+      <div class="card">
+        <div class="card-body">
+          <!-- FormSubmit envia para o email da Ana -->
+          <form id="lead" action="https://formsubmit.co/analima@afinest.pt" method="POST" class="form">
+            <!-- Proteções / configs -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="Novo lead do website — Ana Lima Consultora">
+            <input type="hidden" name="_template" value="box">
+            <input type="hidden" name="_next" value="https://ypeyoung.github.io/analima/#contactos">
+            <input type="text" name="_honey" style="display:none">
+
+            <div class="fields">
+              <div class="field"><label>Nome</label><input name="nome" required /></div>
+              <div class="field"><label>Email</label><input name="email" type="email" required /></div>
+              <div class="field"><label>Telefone</label><input name="telefone" /></div>
+              <div class="field"><label>Assunto</label>
+                <select name="assunto">
+                  <option value="angariar">Quero angariar</option>
+                  <option value="vender">Quero vender</option>
+                  <option value="comprar">Quero comprar</option>
+                  <option value="arrendar">Quero arrendar</option>
+                </select>
+              </div>
+              <div class="field full"><label>Mensagem</label><textarea name="mensagem" rows="5" placeholder="Como posso ajudar?"></textarea></div>
+            </div>
+
+            <button class="btn primary" type="submit">Enviar</button>
+          </form>
         </div>
-        <div><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Av.+Gaspar+Corte+Real%2C+2750-164%2C+Cascais" target="_blank">Ver No Mapa</a></div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <p><strong>Telefone</strong><br> ☎ +351 962 823 794</p>
+          <p><strong>Email</strong><br> 🖨 analima@afinest.pt</p>
+          <p><strong>Morada</strong><br> Av. Gaspar Corte Real, 2750-164, Cascais, Portugal</p>
+
+          <div class="social-icons">
+            <a class="icon" href="https://www.tiktok.com/@analimaconsultora" target="_blank" aria-label="TikTok" title="TikTok">
+              <!-- TikTok SVG -->
+              <svg viewBox="0 0 48 48" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M33.3 9.7a9.6 9.6 0 0 0 5.6 3.3v6.1c-2.1-.1-4.1-.6-6-1.6-1.2-.7-2.3-1.5-3.4-2.6v12c0 6-4.9 10.9-10.9 10.9S7.8 32.9 7.8 26.9c0-6 4.9-10.9 10.9-10.9 1 0 1.9.1 2.8.4v6.4a5.1 5.1 0 0 0-2.8-.8 5.1 5.1 0 1 0 5.1 5.1V6.3h6.5c.5 1.2 1.2 2.4 2 3.4z"/></svg>
+            </a>
+            <a class="icon" href="https://www.instagram.com/analimaconsultora.pt" target="_blank" aria-label="Instagram" title="Instagram">
+              <!-- Instagram SVG -->
+              <svg viewBox="0 0 48 48" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M24 10.8c3.1 0 3.5 0 4.7.1 1.1.1 1.7.2 2.1.3.5.2.9.4 1.3.7.4.3.8.7 1.1 1.1.3.4.5.8.7 1.3.1.4.3 1 .3 2.1.1 1.2.1 1.6.1 4.7s0 3.5-.1 4.7c-.1 1.1-.2 1.7-.3 2.1-.2.5-.4.9-.7 1.3-.3.4-.7.8-1.1 1.1-.4.3-.8.5-1.3.7-.4.1-1 .3-2.1.3-1.2.1-1.6.1-4.7.1s-3.5 0-4.7-.1c-1.1-.1-1.7-.2-2.1-.3-.5-.2-.9-.4-1.3-.7-.4-.3-.8-.7-1.1-1.1-.3-.4-.5-.8-.7-1.3-.1-.4-.3-1-.3-2.1-.1-1.2-.1-1.6-.1-4.7s0-3.5.1-4.7c.1-1.1.2-1.7.3-2.1.2-.5.4-.9.7-1.3.3-.4.7-.8 1.1-1.1.4-.3.8-.5 1.3-.7.4-.1 1-.3 2.1-.3 1.2-.1 1.6-.1 4.7-.1m0-3.3c-3.2 0-3.6 0-4.9.1-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4-.7.7-1.1 1.4-1.4 2.2-.3.8-.6 1.7-.6 3-.1 1.3-.1 1.7-.1 4.9s0 3.6.1 4.9.3 2.2.6 3c.3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 4.9.1s3.6 0 4.9-.1 2.2-.3 3-.6c.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-4.9s0-3.6-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2-.7-.7-1.4-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6-1.2-.1-1.6-.1-4.9-.1z"/><circle cx="24" cy="24" r="7.2"/></svg>
+            </a>
+          </div>
+
+          <!-- Mapa -->
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps?q=Av.%20Gaspar%20Corte%20Real%2C%202750-164%2C%20Cascais&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -240,8 +280,12 @@
     <div class="container footer-inner">
       <div>© <span id="year"></span> Ana Lima Consultora • Av. Gaspar Corte Real, 2750-164, Cascais</div>
       <div class="social">
-        <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank">TikTok</a>
-        <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank">Instagram</a>
+        <a class="icon" href="https://www.tiktok.com/@analimaconsultora" target="_blank" aria-label="TikTok">
+          <svg viewBox="0 0 48 48" width="22" height="22" fill="currentColor"><path d="M33.3 9.7a9.6 9.6 0 0 0 5.6 3.3v6.1c-2.1-.1-4.1-.6-6-1.6-1.2-.7-2.3-1.5-3.4-2.6v12c0 6-4.9 10.9-10.9 10.9S7.8 32.9 7.8 26.9c0-6 4.9-10.9 10.9-10.9 1 0 1.9.1 2.8.4v6.4a5.1 5.1 0 0 0-2.8-.8 5.1 5.1 0 1 0 5.1 5.1V6.3h6.5c.5 1.2 1.2 2.4 2 3.4z"/></svg>
+        </a>
+        <a class="icon" href="https://www.instagram.com/analimaconsultora.pt" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 48 48" width="22" height="22" fill="currentColor"><path d="M24 10.8c3.1 0 3.5 0 4.7.1 1.1.1 1.7.2 2.1.3.5.2.9.4 1.3.7.4.3.8.7 1.1 1.1.3.4.5.8.7 1.3.1.4.3 1 .3 2.1.1 1.2.1 1.6.1 4.7s0 3.5-.1 4.7c-.1 1.1-.2 1.7-.3 2.1-.2.5-.4.9-.7 1.3-.3.4-.7.8-1.1 1.1-.4.3-.8.5-1.3.7-.4.1-1 .3-2.1.3-1.2.1-1.6.1-4.7.1s-3.5 0-4.7-.1c-1.1-.1-1.7-.2-2.1-.3-.5-.2-.9-.4-1.3-.7-.4-.3-.8-.7-1.1-1.1-.3-.4-.5-.8-.7-1.3-.1-.4-.3-1-.3-2.1-.1-1.2-.1-1.6-.1-4.7s0-3.5.1-4.7c.1-1.1.2-1.7.3-2.1.2-.5.4-.9.7-1.3.3-.4.7-.8 1.1-1.1.4-.3.8-.5 1.3-.7.4-.1 1-.3 2.1-.3 1.2-.1 1.6-.1 4.7-.1m0-3.3c-3.2 0-3.6 0-4.9.1-1.3.1-2.2.3-3 .6-.8.3-1.5.7-2.2 1.4-.7.7-1.1 1.4-1.4 2.2-.3.8-.6 1.7-.6 3-.1 1.3-.1 1.7-.1 4.9s0 3.6.1 4.9.3 2.2.6 3c.3.8.7 1.5 1.4 2.2.7.7 1.4 1.1 2.2 1.4.8.3 1.7.5 3 .6 1.3.1 1.7.1 4.9.1s3.6 0 4.9-.1 2.2-.3 3-.6c.8-.3 1.5-.7 2.2-1.4.7-.7 1.1-1.4 1.4-2.2.3-.8.5-1.7.6-3 .1-1.3.1-1.7.1-4.9s0-3.6-.1-4.9c-.1-1.3-.3-2.2-.6-3-.3-.8-.7-1.5-1.4-2.2-.7-.7-1.4-1.1-2.2-1.4-.8-.3-1.7-.5-3-.6-1.2-.1-1.6-.1-4.9-.1z"/><circle cx="24" cy="24" r="7.2"/></svg>
+        </a>
       </div>
     </div>
   </footer>
