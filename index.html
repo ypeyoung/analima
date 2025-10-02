@@ -7,7 +7,7 @@
 
   <!-- SEO base -->
   <meta name="description" content="Consultoria imobiliária em Cascais, Estoril e Beloura. Angariação premium, marketing de imóveis, avaliação e negociação — Ana Lima Consultora." />
-  <link rel="canonical" href="https://SEU_USUARIO.github.io/analima/" />
+  <link rel="canonical" href="https://ypeyoung.github.io/analima/" />
   <meta property="og:title" content="Ana Lima Consultora — Imobiliário de Cascais" />
   <meta property="og:description" content="Angariação e consultoria imobiliária de luxo em Cascais • Estoril • Beloura." />
   <meta property="og:type" content="website" />
@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/styles.css"/>
 
-  <!-- JSON-LD LocalBusiness -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -35,15 +35,13 @@
       "addressLocality":"Cascais",
       "addressCountry":"PT"
     },
-    "url":"https://SEU_USUARIO.github.io/analima/",
-    "sameAs":[
-      "https://www.tiktok.com/@analimaconsultora",
-      "https://www.instagram.com/analimaconsultora.pt"
-    ]
+    "url":"https://ypeyoung.github.io/analima/",
+    "sameAs":["https://www.tiktok.com/@analimaconsultora","https://www.instagram.com/analimaconsultora.pt"]
   }
   </script>
 </head>
 <body>
+  <!-- Header / Nav -->
   <header>
     <div class="container nav">
       <div class="brand">Ana Lima Consultora</div>
@@ -57,35 +55,39 @@
           <li><a href="#contactos">Contactos</a></li>
         </ul>
       </nav>
-      <div class="social">
-        <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank" aria-label="TikTok">TikTok</a>
-        <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank" aria-label="Instagram">Instagram</a>
-        <button class="btn ghost" id="themeToggle" type="button">🌙 Dark</button>
-        <button class="btn menu-btn" aria-label="abrir menu">menu</button>
-      </div>
+      <button class="btn menu-btn" aria-label="abrir menu">menu</button>
     </div>
   </header>
 
-  <!-- HERO com vídeo cinematográfico (YouTube BG) -->
+  <!-- Hero (sem vídeo) -->
   <main id="home" class="hero">
-    <iframe id="ytbg"
-      src="https://www.youtube.com/embed/cZu-4nE2fuo?autoplay=1&mute=1&controls=0&playsinline=1&loop=1&playlist=cZu-4nE2fuo&modestbranding=1&iv_load_policy=3&rel=0&enablejsapi=1"
-      title="Vídeo Apresentativo Imobiliária" frameborder="0"
-      allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-
     <div class="hero-card container reveal">
       <div class="eyebrow">Cascais • Estoril • Beloura</div>
       <h1>Cascais, Com Chave De Ouro</h1>
       <p class="lead">Consultoria imobiliária discreta e eficaz focada em <strong>angariação</strong> e venda com estratégia. Curadoria, marketing de alto impacto e negociação firme.</p>
       <div class="hero-ctas">
         <a class="btn primary" href="#contactos" data-track="cta_hero_captacao">Quero Avaliar O Meu Imóvel</a>
+        <a class="btn" href="blog/" data-track="cta_hero_blog">Ler O Blog</a>
         <a class="btn" href="#imoveis" data-track="cta_hero_ver_imoveis">Ver Imóveis</a>
-        <button id="muteToggle" class="btn" type="button" aria-pressed="true">🔇 Sem Som</button>
       </div>
     </div>
   </main>
 
-  <!-- LISTA DE IMÓVEIS (carrega de imoveis.json) -->
+  <!-- Vídeo Apresentativo (responsivo) -->
+  <section id="video" class="container reveal">
+    <h2>Vídeo Apresentativo</h2>
+    <p class="sub">Conheça o nosso posicionamento e a forma de trabalhar</p>
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/cZu-4nE2fuo?autoplay=0&mute=0&controls=1&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3"
+        title="Vídeo Apresentativo Imobiliária"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Imóveis -->
   <section id="imoveis" class="container reveal alt">
     <h2>Imóveis Em Destaque</h2>
     <p class="sub">Seleção curada nas melhores zonas de Cascais e Estoril</p>
@@ -106,16 +108,20 @@
     <div class="grid cols-3" id="cards">
       <article class="card reveal"><div class="card-body"><div class="meta">A carregar imóveis…</div></div></article>
     </div>
+
+    <div style="margin-top:16px">
+      <a class="btn" href="blog/" data-track="cta_listings_blog">Dicas De Mercado No Blog</a>
+    </div>
   </section>
 
-  <!-- SERVIÇOS (angariação primeiro) -->
+  <!-- Serviços com SPOILERS -->
   <section id="servicos" class="container reveal">
-    <h2>Serviços Para Angariação</h2>
-    <p class="sub">Maximizamos o valor do seu imóvel e encurtamos o tempo de venda</p>
+    <h2>Serviços</h2>
+    <p class="sub">Acompanho proprietários e compradores do início ao fim</p>
 
-    <div class="grid cols-2">
-      <div class="card"><div class="card-body">
-        <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-size:1.4rem">Plano De Angariação Premium</h3>
+    <details class="spoiler">
+      <summary>Plano De Angariação Premium</summary>
+      <div style="margin-top:10px">
         <ul>
           <li>Avaliação detalhada e estudo comparativo em Cascais/Estoril/Beloura</li>
           <li>Produção de conteúdo: fotos editoriais, vídeo e <em>drone</em></li>
@@ -123,17 +129,29 @@
           <li>Gestão de leads e <em>follow-up</em> com CRM</li>
         </ul>
         <a class="btn primary" href="#contactos" data-track="lead_captacao">Quero Angariar O Meu Imóvel</a>
-      </div></div>
+      </div>
+    </details>
 
-      <div class="card"><div class="card-body">
-        <h3 style="margin:0 0 8px; font-family:'Cormorant Garamond',serif; font-size:1.4rem">Para Compradores</h3>
-        <p>Curadoria de oportunidades, visitas acompanhadas e due diligence simples para uma decisão segura.</p>
-        <a class="btn" href="#contactos" data-track="lead_comprador">Falar Comigo</a>
-      </div></div>
+    <details class="spoiler">
+      <summary>Para Proprietários — Vender/Arrendar</summary>
+      <div style="margin-top:10px">
+        Avaliação, posicionamento, produção de conteúdo, visitas e negociação com total transparência.
+      </div>
+    </details>
+
+    <details class="spoiler">
+      <summary>Para Compradores</summary>
+      <div style="margin-top:10px">
+        Curadoria de oportunidades, visitas acompanhadas e due diligence simples para uma decisão segura.
+      </div>
+    </details>
+
+    <div style="margin-top:16px">
+      <a class="btn" href="blog/" data-track="cta_servicos_blog">Ler Estratégias No Blog</a>
     </div>
   </section>
 
-  <!-- SOBRE -->
+  <!-- Sobre -->
   <section id="sobre" class="container reveal alt">
     <div class="about">
       <div class="photo">
@@ -146,29 +164,44 @@
       <div>
         <h2>Sobre A Ana</h2>
         <p class="sub">Mais do que transações, relações de confiança</p>
-        <p>Consultoria imobiliária discreta e eficaz nas zonas de Cascais, Estoril e Beloura. Estratégia, comunicação clara e negociação firme.</p>
+        <p>Sou consultora imobiliária focada em Cascais, Estoril e Beloura. Trabalho com curadoria de imóveis, comunicação clara e negociação firme, sempre com discrição e atenção ao detalhe.</p>
         <div style="margin-top:10px; display:flex; gap:.6rem; flex-wrap:wrap">
-          <span class="chip">Cascais</span>
-          <span class="chip">Estoril</span>
-          <span class="chip">Beloura</span>
-          <span class="chip">Alcabideche</span>
+          <span class="btn ghost">Cascais</span>
+          <span class="btn ghost">Estoril</span>
+          <span class="btn ghost">Beloura</span>
+          <span class="btn ghost">Alcabideche</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- VÍDEO -->
-  <section id="video" class="container reveal">
-    <h2>Vídeo Apresentativo</h2>
-    <p class="sub">Conheça o nosso posicionamento e a forma de trabalhar</p>
-    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.45)">
-      <iframe src="https://www.youtube.com/embed/cZu-4nE2fuo" title="Vídeo Apresentativo Imobiliária" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  <!-- Destaques do Blog -->
+  <section id="blog-links" class="container reveal">
+    <h2>Do Blog</h2>
+    <p class="sub">Leituras rápidas para proprietários e compradores</p>
+    <div class="grid cols-3">
+      <a class="card" href="blog/angariacao-cascais.html">
+        <div class="card-body">
+          <h3 style="margin:0">Guia: Angariar Em Cascais</h3>
+          <p class="meta">Estratégia • Captação • Marketing</p>
+        </div>
+      </a>
+      <a class="card" href="blog/arrendamento-estoril-2025.html">
+        <div class="card-body">
+          <h3 style="margin:0">Arrendamento No Estoril (2025)</h3>
+          <p class="meta">Tendências • Dicas</p>
+        </div>
+      </a>
+      <a class="card" href="blog/beloura-condominios.html">
+        <div class="card-body">
+          <h3 style="margin:0">Beloura: Condomínios E Valorização</h3>
+          <p class="meta">Zonas • Lifestyle</p>
+        </div>
+      </a>
     </div>
   </section>
 
-  <!-- CONTACTOS -->
+  <!-- Contactos -->
   <section id="contactos" class="container reveal alt">
     <h2>Contactos</h2>
     <p class="sub">Fale comigo — resposta rápida</p>
@@ -192,30 +225,34 @@
         <p><strong>Telefone</strong><br> ☎ +351 962 823 794</p>
         <p><strong>Email</strong><br> 🖨 analima@afinest.pt</p>
         <p><strong>Morada</strong><br> Av. Gaspar Corte Real, 2750-164, Cascais, Portugal</p>
-        <div style="margin:12px 0" class="social">
-          <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank" aria-label="TikTok">TikTok</a>
-          <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank" aria-label="Instagram">Instagram</a>
+        <div style="margin:12px 0; display:flex; gap:.6rem; flex-wrap:wrap">
+          <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank">TikTok</a>
+          <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank">Instagram</a>
+          <a class="btn" href="blog/">Ir Para O Blog</a>
         </div>
         <div><a class="btn" href="https://www.google.com/maps/search/?api=1&query=Av.+Gaspar+Corte+Real%2C+2750-164%2C+Cascais" target="_blank">Ver No Mapa</a></div>
       </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> Ana Lima Consultora • Av. Gaspar Corte Real, 2750-164, Cascais</div>
       <div class="social">
-        <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank" aria-label="TikTok">TikTok</a>
-        <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank" aria-label="Instagram">Instagram</a>
+        <a class="btn ghost" href="https://www.tiktok.com/@analimaconsultora" target="_blank">TikTok</a>
+        <a class="btn ghost" href="https://www.instagram.com/analimaconsultora.pt" target="_blank">Instagram</a>
       </div>
     </div>
   </footer>
 
+  <!-- Ações flutuantes -->
   <button class="btn to-top" id="toTop" aria-label="voltar ao topo">↑ Topo</button>
   <div class="whatsapp">
     <a href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20vi%20o%20site%20e%20quero%20falar" target="_blank" rel="noopener" data-track="whatsapp_click">WhatsApp</a>
   </div>
 
+  <!-- Scripts -->
   <script src="assets/app.js"></script>
 </body>
 </html>
