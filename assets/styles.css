@@ -136,3 +136,28 @@ html{scroll-behavior:smooth}
 /* Entradas de animação */
 .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
 .reveal.show{opacity:1; transform:translateY(0)}
+/* === Blog cards === */
+.post-grid{display:grid; gap:18px; grid-template-columns:repeat(3,1fr)}
+@media (max-width:1024px){.post-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:720px){.post-grid{grid-template-columns:1fr}}
+.post-card .tag{position:absolute; right:12px; top:12px; background:rgba(0,0,0,.6); color:#fff; padding:.28rem .55rem; border-radius:999px; font-size:.75rem}
+
+/* === Mobile menu dropdown === */
+@media (max-width:860px){
+  header nav ul.open{
+    display:flex !important; 
+    flex-direction:column;
+    position:fixed; top:64px; right:4%; left:4%;
+    background:rgba(255,255,255,.85);
+    border:1px solid var(--ring);
+    border-radius:14px; padding:10px;
+    backdrop-filter: blur(8px) saturate(160%);
+    z-index:100;
+  }
+  header nav ul.open a{padding:12px; border-radius:10px}
+  header nav ul.open a:hover{background:rgba(0,0,0,.06)}
+}
+
+/* Footer crédito */
+.footer-credits{font-size:.9rem; color:#5a5754}
+.footer-credits a{color:inherit; text-decoration:underline}
