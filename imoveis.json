@@ -1,0 +1,84 @@
+[
+  {
+    "titulo": "Moradia T4",
+    "zona": "Alcabideche",
+    "tipo": "Moradia T4",
+    "preco": "340.000",
+    "preco_num": 340000,
+    "meta": "Adroana • 169,6 m² • Terreno 315 m²",
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P27451464/Tphoto/ID48e0a201-0000-0500-0000-0000162e0e5d.jpg",
+    "badge": "Por Recuperar"
+  },
+  {
+    "titulo": "Estúdio/Comercial 220 m²",
+    "zona": "Cascais",
+    "tipo": "Comercial T1",
+    "preco": "390.000",
+    "preco_num": 390000,
+    "meta": "Cascais e Estoril • Usado • 220 m² bruta",
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26603765/Tphoto/IDf5f09501-0000-0500-0000-000015223544.jpg"
+  },
+  {
+    "titulo": "Moradia T3 Térrea",
+    "zona": "Alcabideche",
+    "tipo": "Moradia T3",
+    "preco": "1.100.000",
+    "preco_num": 1100000,
+    "meta": "171 m² úteis • Terreno 1.418 m²",
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25439715/Tphoto/IDe32d8401-0000-0500-0000-000014008308.jpg"
+  },
+  {
+    "titulo": "Arrecadação 25 m²",
+    "zona": "Beloura",
+    "tipo": "Arrecadacao",
+    "preco": "29.000",
+    "preco_num": 29000,
+    "meta": "Segurança 24h • Centro Comercial",
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26803355/Tphoto/ID9bfc9801-0000-0500-0000-0000156002b3.jpg"
+  },
+  {
+    "titulo": "Apartamento T2",
+    "zona": "Alcabideche",
+    "tipo": "Apartamento T2",
+    "preco": "570.000",
+    "preco_num": 570000,
+    "meta": "Amoreira • Condomínio com piscina",
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25522766/Tphoto/ID4e728501-0000-0500-0000-000015c0ecb7.jpg"
+  },
+  {
+    "titulo": "Apartamento T2 (Arrendamento)",
+    "zona": "Alcabideche",
+    "tipo": "Apartamento T2",
+    "preco": "2.300/mês",
+    "preco_num": 2300,
+    "meta": "Amoreira • Condomínio com piscina",
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25522542/Tphoto/ID6e718501-0000-0500-0000-000015c0ec4a.jpg"
+  },
+  {
+    "titulo": "Apartamento T3 + Jardim",
+    "zona": "Beloura",
+    "tipo": "Apartamento T3",
+    "preco": "1.190.000",
+    "preco_num": 1190000,
+    "meta": "406 m² bruta • Renovado",
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P27220216/Tphoto/IDf8589f01-0000-0500-0000-000015e37f5f.jpg"
+  },
+  {
+    "titulo": "T3+1 Duplex Lugares de Byron",
+    "zona": "Beloura",
+    "tipo": "Apartamento T3",
+    "preco": "850.000",
+    "preco_num": 850000,
+    "meta": "241 m² bruta • Renovado",
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26802560/Tphoto/ID80f99801-0000-0500-0000-0000155cf85f.jpg"
+  },
+  {
+    "titulo": "Terreno 10.680 m²",
+    "zona": "Alcabideche",
+    "tipo": "Terreno",
+    "preco": "6.000.000",
+    "preco_num": 6000000,
+    "meta": "Comércio e serviços",
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26905420/Tphoto/ID4c8b9a01-0000-0500-0000-0000157e1b09.jpg"
+  }
+]
