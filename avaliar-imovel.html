@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Avalie O Seu Imóvel Em Cascais — Em 48h | Ana Lima Consultora</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Avaliação gratuita e confidencial do seu imóvel em Cascais, Estoril e Beloura. Receba uma análise de mercado em até 48h e um plano de angariação premium."/>
+  <link rel="canonical" href="https://ypeyoung.github.io/analima/landing/avaliar-imovel.html"/>
+  <meta property="og:title" content="Avalie O Seu Imóvel Em Cascais — Em 48h"/>
+  <meta property="og:description" content="Análise de mercado + plano de angariação premium. Discreto, eficiente e com foco em valor."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1200&auto=format&fit=crop"/>
+  <meta name="theme-color" content="#f3efe7"/>
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://analimaconsultora.pt/wp-content/uploads/cropped-Ana_Lima-01-removebg-preview.png" sizes="any"/>
+
+  <!-- Fonts + CSS (reutiliza o teu styles.css bege) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/styles.css"/>
+
+  <!-- Ajustes de layout específicos da LP -->
+  <style>
+    .lp-hero{
+      position:relative; display:grid; align-items:center; min-height:84vh; background:var(--bg);
+      padding:32px 0 18px;
+    }
+    .lp-hero .hero-wrap{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
+    @media (max-width:960px){ .lp-hero .hero-wrap{grid-template-columns:1fr; gap:18px} }
+    .lp-hero .img{
+      border-radius:18px; overflow:hidden; box-shadow:var(--shadow); aspect-ratio:16/11; background:#e3ded6;
+      background-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover; background-position:center;
+    }
+    .lp-hero h1{font-family:"Cormorant Garamond",serif; font-size:clamp(2.1rem,5vw,3.4rem); margin:0 0 10px}
+    .lp-lead{color:var(--ink-2); font-size:1.06rem}
+    .lp-bullets{display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 18px}
+    .lp-bullets .pill{border:1px solid var(--ring); border-radius:999px; padding:.5rem .8rem; background:rgba(255,255,255,.5)}
+    .lp-form{
+      background:rgba(255,255,255,.6); border:1px solid var(--ring); border-radius:16px; box-shadow:var(--shadow); padding:16px;
+    }
+    .lp-form .fields{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    .lp-form .full{grid-column:1/-1}
+    @media (max-width:720px){ .lp-form .fields{grid-template-columns:1fr} }
+    .lp-trust{display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; color:var(--muted); font-size:.92rem}
+    .lp-cta-row{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:10px}
+    .lp-cta-row .note{color:var(--muted); font-size:.92rem}
+
+    .steps{display:grid; gap:18px; grid-template-columns:repeat(3,1fr)}
+    @media (max-width:960px){ .steps{grid-template-columns:1fr} }
+    .step{background:var(--panel); border:1px solid var(--ring); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+    .step .n{font-weight:700; font-size:1.1rem; color:var(--muted-2)}
+
+    .zones{display:flex; gap:8px; flex-wrap:wrap}
+    .zones .pill{border:1px solid var(--ring); border-radius:999px; padding:.5rem .8rem; background:rgba(255,255,255,.5)}
+
+    .testi{display:grid; gap:18px; grid-template-columns:repeat(3,1fr)}
+    @media (max-width:960px){ .testi{grid-template-columns:1fr} }
+    .quote{background:var(--panel); border:1px solid var(--ring); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+    .quote .who{color:var(--muted)}
+
+    .faq{display:grid; gap:12px}
+    .faq details{background:var(--panel); border:1px solid var(--ring); border-radius:14px; padding:14px; box-shadow:var(--shadow)}
+    .faq summary{cursor:pointer; font-weight:600}
+    .faq summary::-webkit-details-marker{display:none}
+
+    /* header minimal para reduzir distração */
+    .lp-topbar{padding:10px 0; border-bottom:1px solid var(--ring); background:rgba(243,239,231,.75); backdrop-filter: blur(6px)}
+    .lp-topbar .top{display:flex; justify-content:space-between; align-items:center; gap:12px}
+    .lp-brand{font-family:"Cormorant Garamond",serif; font-weight:600}
+    .lp-actions{display:flex; gap:8px; align-items:center; flex-wrap:wrap}
+    .lp-actions .btn{padding:.7rem 1rem}
+
+    /* footer crédito */
+    .footer-credits{font-size:.9rem; color:#5a5754}
+    .footer-credits a{color:inherit; text-decoration:underline}
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Avalie o seu imóvel em Cascais",
+    "about":"Angariação e avaliação de imóveis",
+    "publisher":{"@type":"Organization","name":"Ana Lima Consultora"}
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Topbar minimal (logo + ação WhatsApp) -->
+  <div class="lp-topbar">
+    <div class="container top">
+      <div class="lp-brand">Ana Lima Consultora</div>
+      <div class="lp-actions">
+        <a class="btn" href="../#imoveis">Ver Imóveis</a>
+        <a class="btn" href="../blog/">Blog</a>
+        <a class="btn primary" href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20quero%20avaliar%20o%20meu%20im%C3%B3vel" target="_blank" rel="noopener">Falar No WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO / FORM -->
+  <section class="lp-hero">
+    <div class="container hero-wrap">
+      <div>
+        <h1>Avalie O Seu Imóvel Em 48h</h1>
+        <p class="lp-lead">Análise de mercado real, estratégia de preço e um plano de angariação premium — Cascais, Estoril e Beloura. Discreto, rápido e orientado a valor.</p>
+        <div class="lp-bullets">
+          <span class="pill">Estudo comparativo</span>
+          <span class="pill">Plano de marketing</span>
+          <span class="pill">Fotografia & vídeo</span>
+          <span class="pill">Captação qualificada</span>
+        </div>
+        <div class="lp-cta-row">
+          <a class="btn primary" href="#form">Quero Avaliar O Meu Imóvel</a>
+          <a class="btn" href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20quero%20avaliar%20o%20meu%20im%C3%B3vel" target="_blank" rel="noopener">Falar No WhatsApp</a>
+          <span class="note">Resposta rápida no mesmo dia útil</span>
+        </div>
+        <div class="lp-trust">
+          <span>✔ Confidencial</span>
+          <span>✔ Sem compromisso</span>
+          <span>✔ Foco em valorização</span>
+        </div>
+      </div>
+
+      <div class="lp-form" id="form">
+        <form id="leadLP" action="https://formsubmit.co/analima@afinest.pt" method="POST" class="form">
+          <!-- Proteções / configs -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="Avaliação — LP Angariação (Ana Lima)">
+          <input type="hidden" name="_template" value="box">
+          <input type="hidden" name="_next" value="https://ypeyoung.github.io/analima/#contactos">
+          <input type="text" name="_honey" style="display:none">
+          <!-- Captura UTM / origem -->
+          <input type="hidden" name="utm_source" id="utm_source">
+          <input type="hidden" name="utm_medium" id="utm_medium">
+          <input type="hidden" name="utm_campaign" id="utm_campaign">
+          <input type="hidden" name="utm_content" id="utm_content">
+          <input type="hidden" name="page_url" id="page_url">
+
+          <div class="fields">
+            <div class="field"><label>Nome</label><input name="nome" required/></div>
+            <div class="field"><label>Email</label><input type="email" name="email" required/></div>
+            <div class="field"><label>Telefone</label><input name="telefone"/></div>
+            <div class="field"><label>Localização</label>
+              <select name="zona">
+                <option value="Cascais">Cascais</option>
+                <option value="Estoril">Estoril</option>
+                <option value="Beloura">Beloura</option>
+                <option value="Alcabideche">Alcabideche</option>
+                <option value="Outra">Outra</option>
+              </select>
+            </div>
+            <div class="field"><label>Tipo De Imóvel</label>
+              <select name="tipo">
+                <option>Apartamento</option>
+                <option>Moradia</option>
+                <option>Terreno</option>
+                <option>Comercial</option>
+              </select>
+            </div>
+            <div class="field"><label>Tipologia</label>
+              <select name="tipologia">
+                <option>T0</option><option>T1</option><option>T2</option><option>T3</option><option>T4</option><option>T5+</option>
+              </select>
+            </div>
+            <div class="field full"><label>Observações</label><textarea name="mensagem" rows="4" placeholder="Ex.: estado, áreas, garagens, vista, urgência…"></textarea></div>
+            <div class="field full" style="display:flex; gap:8px; align-items:flex-start">
+              <input id="consent" type="checkbox" required style="margin-top:.35rem">
+              <label for="consent" style="font-size:.92rem; color:var(--muted)">
+                Concordo em ser contactado(a) por email/telefone para a finalidade desta avaliação. Os meus dados não serão partilhados com terceiros.
+              </label>
+            </div>
+          </div>
+
+          <button class="btn primary" type="submit">Pedir Avaliação</button>
+          <div class="lp-trust">Ao enviar, aceita os termos desta solicitação sem compromisso.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Zonas foco -->
+  <section>
+    <div class="container">
+      <h2>Zonas De Atuação</h2>
+      <p class="sub">Foco local para uma avaliação precisa e angariação eficaz</p>
+      <div class="zones">
+        <span class="pill">Cascais</span>
+        <span class="pill">Estoril</span>
+        <span class="pill">Beloura</span>
+        <span class="pill">Alcabideche</span>
+        <span class="pill">Parede</span>
+        <span class="pill">Carcavelos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Processo em 3 passos -->
+  <section>
+    <div class="container">
+      <h2>Como Funciona</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="n">01 — Pedido</div>
+          <p>Envia o formulário com os dados do imóvel e disponibilidade para contacto.</p>
+        </div>
+        <div class="step">
+          <div class="n">02 — Análise</div>
+          <p>Estudo comparativo de mercado e visita técnica para ajustar preço e estratégia.</p>
+        </div>
+        <div class="step">
+          <div class="n">03 — Plano & Captação</div>
+          <p>Plano de marketing (foto, vídeo e <em>drone</em>), landing dedicada e captação qualificada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prova social -->
+  <section>
+    <div class="container">
+      <h2>O Que Dizem Os Clientes</h2>
+      <div class="testi">
+        <div class="quote">
+          “Venda rápida e segura. A estratégia de preço e a apresentação fizeram toda a diferença.”
+          <div class="who">— J.M., Cascais</div>
+        </div>
+        <div class="quote">
+          “Transparência do início ao fim. Em uma semana já tínhamos visitas qualificadas.”
+          <div class="who">— R.A., Estoril</div>
+        </div>
+        <div class="quote">
+          “Avaliação realista e plano de marketing impecável. Recomendo sem reservas.”
+          <div class="who">— S.L., Beloura</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="container">
+      <h2>Dúvidas Frequentes</h2>
+      <div class="faq">
+        <details><summary>Quanto custa a avaliação?</summary><div>É gratuita e sem compromisso para proprietários nas zonas de atuação.</div></details>
+        <details><summary>Em quanto tempo recebo a análise?</summary><div>Normalmente até 48 horas úteis após recebermos os dados e, se necessário, efetuarmos a visita.</div></details>
+        <details><summary>O meu imóvel fica exclusivo?</summary><div>Trabalhamos com exclusividade apenas quando faz sentido para maximizar o resultado. Tudo é combinado previamente.</div></details>
+        <details><summary>Como tratam os meus dados?</summary><div>Usamos apenas para esta avaliação e contacto direto. Não partilhamos com terceiros.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contactos + Mapa -->
+  <section>
+    <div class="container grid cols-2">
+      <div class="card">
+        <div class="card-body">
+          <h3 style="margin:0 0 8px">Contactos</h3>
+          <p><strong>Telefone</strong><br/>☎ +351 962 823 794</p>
+          <p><strong>Email</strong><br/>🖨 analima@afinest.pt</p>
+          <p><strong>Morada</strong><br/>Av. Gaspar Corte Real, 2750-164, Cascais, Portugal</p>
+          <div style="display:flex; gap:.6rem; flex-wrap:wrap">
+            <a class="btn" href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20quero%20avaliar%20o%20meu%20im%C3%B3vel" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn" href="../blog/">Ir Para O Blog</a>
+          </div>
+        </div>
+      </div>
+      <div class="card"><div class="card-body">
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps?q=Av.%20Gaspar%20Corte%20Real%2C%202750-164%2C%20Cascais&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Ana Lima Consultora • Avaliação de Imóveis</div>
+      <div class="footer-credits">Desenvolvido por <a href="https://www.highlevelmkt.com" target="_blank" rel="noopener">High Level Marketing</a></div>
+    </div>
+  </footer>
+
+  <!-- Botão topo + WhatsApp fixo -->
+  <button class="btn to-top" id="toTop" aria-label="voltar ao topo">↑ Topo</button>
+  <div class="whatsapp">
+    <a href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20quero%20avaliar%20o%20meu%20im%C3%B3vel" target="_blank" rel="noopener" data-track="whatsapp_click">WhatsApp</a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/app.js"></script>
+  <script>
+    // Captura UTM e página
+    (function(){
+      const params = new URLSearchParams(location.search);
+      const set = (id, key) => { const el = document.getElementById(id); if(el) el.value = params.get(key) || ''; };
+      set('utm_source','utm_source'); set('utm_medium','utm_medium'); set('utm_campaign','utm_campaign'); set('utm_content','utm_content');
+      const pu = document.getElementById('page_url'); if(pu) pu.value = location.href;
+    })();
+  </script>
+</body>
+</html>
