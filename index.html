@@ -4,21 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="index,follow"/>
-  <title>Imobiliária Cascais | Consultoria Premium e Vendas de Imóveis em Estoril e Beloura | Ana Lima Consultora</title>
+  <title>Ana Lima Consultora | Imobiliário em Cascais (Angariação • Estoril • Beloura)</title>
 
   <!-- SEO base -->
-  <meta name="description" content="Consultoria imobiliária premium em Cascais, Estoril e Beloura. Encontre imóveis de luxo para venda, arrendamento ou angariação. Avalie seu imóvel com a Ana Lima Consultora em 48h." />
-  <link rel="canonical" href="https://analimaconsultora.pt/" />
+  <meta name="description" content="Consultoria imobiliária em Cascais, Estoril e Beloura. Foco em angariação e venda com estratégia, marketing premium e negociação. Avalie o seu imóvel em 48h." />
+  <link rel="canonical" href="https://ypeyoung.github.io/analima/" />
   <meta name="theme-color" content="#f3efe7" />
 
   <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Ana Lima Consultora — Imobiliário de Luxo em Cascais | Angariação e Venda" />
-  <meta property="og:description" content="Angariação premium, avaliação e venda de imóveis em Cascais, Estoril e Beloura." />
+  <meta property="og:title" content="Ana Lima Consultora — Imobiliário em Cascais (Angariação)" />
+  <meta property="og:description" content="Angariação premium com avaliação em 48h. Cascais • Estoril • Beloura." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://analimaconsultora.pt/" />
-  <meta property="og:image" content="https://analimaconsultora.pt/images/logo.jpg" />
+  <meta property="og:url" content="https://ypeyoung.github.io/analima/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?q=80&w=1200&auto=format&fit=crop" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="https://analimaconsultora.pt/images/logo.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" href="https://analimaconsultora.pt/wp-content/uploads/cropped-Ana_Lima-01-removebg-preview.png" sizes="any" />
@@ -52,11 +51,25 @@
       "addressCountry":"PT"
     },
     "telephone":"+351962823794",
-    "url":"https://analimaconsultora.pt/",
+    "url":"https://ypeyoung.github.io/analima/",
     "sameAs":[
       "https://www.tiktok.com/@analimaconsultora",
       "https://www.instagram.com/analimaconsultora.pt"
     ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Ana Lima Consultora",
+    "url":"https://ypeyoung.github.io/analima/",
+    "inLanguage":"pt-PT",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://ypeyoung.github.io/analima/blog/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
   }
   </script>
 </head>
@@ -125,7 +138,7 @@
     </div>
 
     <div class="grid cols-3" id="cards" aria-live="polite">
-      <!-- Imóveis serão carregados dinamicamente via JSON -->
+      <article class="card reveal"><div class="card-body"><div class="meta">A carregar imóveis…</div></div></article>
     </div>
 
     <!-- CTA Avaliar Imóvel + Blog -->
@@ -247,7 +260,7 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Novo lead do website — Ana Lima Consultora">
             <input type="hidden" name="_template" value="box">
-            <input type="hidden" name="_next" value="https://analimaconsultora.pt/#contactos">
+            <input type="hidden" name="_next" value="https://ypeyoung.github.io/analima/#contactos">
             <input type="text" name="_honey" style="display:none">
 
             <div class="fields">
@@ -317,32 +330,6 @@
   </div>
 
   <!-- Scripts -->
-  <script>
-    fetch('imoveis.json')
-      .then(response => response.json())
-      .then(data => {
-        const imoveisContainer = document.getElementById('cards');
-        data.forEach(imovel => {
-          const imovelElement = document.createElement('article');
-          imovelElement.classList.add('card', 'reveal');
-          
-          imovelElement.innerHTML = `
-            <img src="${imovel.img}" alt="${imovel.titulo}" />
-            <div class="card-body">
-              <h3>${imovel.titulo}</h3>
-              <p><strong>Preço:</strong> ${imovel.preco}</p>
-              <p><strong>Zona:</strong> ${imovel.zona}</p>
-              <p>${imovel.meta}</p>
-              ${imovel.descricao ? `<p><strong>Descrição:</strong> ${imovel.descricao}</p>` : ''}
-            </div>
-          `;
-          
-          imoveisContainer.appendChild(imovelElement);
-        });
-      })
-      .catch(error => {
-        console.error('Erro ao carregar os imóveis:', error);
-      });
-  </script>
+  <script src="assets/app.js"></script>
 </body>
 </html>
