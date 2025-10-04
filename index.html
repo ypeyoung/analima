@@ -124,7 +124,7 @@
     </div>
 
     <div class="grid cols-3" id="cards" aria-live="polite">
-      <article class="card reveal"><div class="card-body"><div class="meta">A carregar imóveis…</div></div></article>
+      <!-- Os imóveis serão carregados aqui dinamicamente via JavaScript -->
     </div>
 
     <!-- CTA Avaliar Imóvel + Blog -->
@@ -316,6 +316,32 @@
   </div>
 
   <!-- Scripts -->
-  <script src="assets/app.js"></script>
+  <script>
+    fetch('imoveis.json')
+      .then(response => response.json())
+      .then(data => {
+        const imoveisContainer = document.getElementById('cards');
+        data.forEach(imovel => {
+          const imovelElement = document.createElement('article');
+          imovelElement.classList.add('card', 'reveal');
+          
+          imovelElement.innerHTML = `
+            <img src="${imovel.img}" alt="${imovel.titulo}" />
+            <div class="card-body">
+              <h3>${imovel.titulo}</h3>
+              <p><strong>Preço:</strong> ${imovel.preco}</p>
+              <p><strong>Zona:</strong> ${imovel.zona}</p>
+              <p>${imovel.meta}</p>
+              ${imovel.descricao ? `<p><strong>Descrição:</strong> ${imovel.descricao}</p>` : ''}
+            </div>
+          `;
+          
+          imoveisContainer.appendChild(imovelElement);
+        });
+      })
+      .catch(error => {
+        console.error('Erro ao carregar os imóveis:', error);
+      });
+  </script>
 </body>
 </html>
