@@ -358,18 +358,15 @@ html{scroll-behavior:smooth}
         <!-- Painel: FOTOS -->
         <div class="panel" id="panel-fotos" role="tabpanel">
           <div class="hero-media">
-            <img id="heroPhoto" src="/images/_7IV3497-HDR.jpg" alt="Foto destaque do imóvel"/>
+            <img id="heroPhoto" src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg" alt="Foto destaque do imóvel"/>
             <span class="corner-badge">Baixa de Preço</span>
           </div>
           <div class="thumbs" id="photoThumbs" role="list">
-            <img role="listitem" src="/images/_7IV3497-HDR.jpg" alt="Fachada" data-full="/images/_7IV3497-HDR.jpg" class="active"/>
-            <img role="listitem" src="/images/_7IV3455-HDR.jpg" alt="Sala 63 m²" data-full="/images/_7IV3455-HDR.jpg"/>
-            <img role="listitem" src="/images/_7IV3473-HDR.jpg" alt="Cozinha equipada" data-full="/images/_7IV3473-HDR.jpg"/>
-            <img role="listitem" src="/images/_7IV3491-HDR.jpg" alt="Terraço frontal" data-full="/images/_7IV3491-HDR.jpg"/>
-            <img role="listitem" src="/images/_7IV3449-HDR.jpg" alt="Suíte" data-full="/images/_7IV3449-HDR.jpg"/>
-            <img role="listitem" src="/images/_7IV3479-HDR.jpg" alt="Jardim" data-full="/images/_7IV3479-HDR.jpg"/>
-            <img role="listitem" src="/images/_7IV3545-HDR.jpg" alt="Piscina condomínio" data-full="/images/_7IV3545-HDR.jpg"/>
-            <img role="listitem" src="/images/_7IV3536-HDR.jpg" alt="Ginásio" data-full="/images/_7IV3536-HDR.jpg"/>
+            <!-- Thumbs serão inseridas via JS a partir de BEST20 -->
+          </div>
+          <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:6px">
+            <button id="btnVerMais" class="btn">Ver mais fotos</button>
+            <a class="btn" target="_blank" rel="noopener" id="btnAbrirVideo">Ver vídeo no YouTube</a>
           </div>
         </div>
 
@@ -676,7 +673,31 @@ document.querySelectorAll('[data-track]').forEach(el=>{
 });
     // Tabs logic + thumbs + lightbox simples
   (function(){
-    const tabs=[...document.querySelectorAll('.tab')];
+    const CDN = 'https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/';
+const BEST20 = [
+  '_7IV3497-HDR.jpg','_7IV3455-HDR.jpg','_7IV3491-HDR.jpg','_7IV3449-HDR.jpg','_7IV3473-HDR.jpg',
+  '_7IV3479-HDR.jpg','_7IV3545-HDR.jpg','_7IV3536-HDR.jpg','_7IV3527-HDR.jpg','_7IV3515-HDR.jpg',
+  '_7IV3521-HDR.jpg','_7IV3506-HDR.jpg','_7IV3503-HDR.jpg','_7IV3467-HDR.jpg','_7IV3464-HDR.jpg',
+  '_7IV3485-HDR.jpg','_7IV3488-HDR.jpg','_7IV3813-HDR.jpg','_7IV3799-HDR.jpg','_7IV3524-HDR.jpg'
+].filter(Boolean);
+const MORE = [
+  '_7IV3452-HDR.jpg','_7IV3458-HDR.jpg','_7IV3461-HDR.jpg','_7IV3470-HDR.jpg','_7IV3476-HDR.jpg',
+  '_7IV3482-HDR.jpg','_7IV3494-HDR.jpg','_7IV3500-HDR.jpg','_7IV3509-HDR.jpg','_7IV3518-HDR.jpg',
+  '_7IV3530-HDR.jpg','_7IV3533-HDR.jpg','_7IV3539-HDR.jpg','_7IV3548-HDR.jpg','_7IV3551-HDR.jpg',
+  '_7IV3554-HDR.jpg','_7IV3560-HDR.jpg','_7IV3563-HDR.jpg','_7IV3566-HDR.jpg','_7IV3569-HDR.jpg',
+  '_7IV3575-HDR.jpg','_7IV3578-HDR.jpg','_7IV3581-HDR.jpg','_7IV3584-HDR.jpg','_7IV3587-HDR.jpg',
+  '_7IV3590-HDR.jpg','_7IV3593-HDR.jpg','_7IV3596-HDR.jpg','_7IV3602-HDR.jpg','_7IV3605-HDR.jpg',
+  '_7IV3608-HDR.jpg','_7IV3611-HDR.jpg','_7IV3614-HDR.jpg','_7IV3617-HDR.jpg','_7IV3623-HDR.jpg',
+  '_7IV3626-HDR.jpg','_7IV3629-HDR.jpg','_7IV3635-HDR.jpg','_7IV3638-HDR.jpg','_7IV3641-HDR.jpg',
+  '_7IV3644-HDR.jpg','_7IV3650-HDR.jpg','_7IV3659-HDR.jpg','_7IV3662-HDR.jpg','_7IV3665-HDR.jpg',
+  '_7IV3668-HDR.jpg','_7IV3671-HDR.jpg','_7IV3677-HDR.jpg','_7IV3680-HDR.jpg','_7IV3683-HDR.jpg',
+  '_7IV3686-HDR.jpg','_7IV3689-HDR.jpg','_7IV3692-HDR.jpg','_7IV3695-HDR.jpg','_7IV3698-HDR.jpg',
+  '_7IV3701-HDR.jpg','_7IV3704-HDR.jpg','_7IV3707-HDR.jpg','_7IV3710-HDR.jpg','_7IV3713-HDR.jpg',
+  '_7IV3719-HDR.jpg','_7IV3722-HDR.jpg','_7IV3729-HDR.jpg','_7IV3743-HDR.jpg','_7IV3750-HDR.jpg',
+  '_7IV3757-HDR.jpg','_7IV3764-HDR.jpg','_7IV3778-HDR.jpg','_7IV3792-HDR.jpg','_7IV3806-HDR.jpg',
+  '_7IV3820-HDR.jpg'
+];
+const tabs=[...document.querySelectorAll('.tab')];
     const panels={fotos:document.getElementById('panel-fotos'), videos:document.getElementById('panel-videos'), plantas:document.getElementById('panel-plantas')};
     tabs.forEach(t=>t.addEventListener('click',()=>{
       tabs.forEach(x=>x.classList.remove('active'));
@@ -687,21 +708,42 @@ document.querySelectorAll('[data-track]').forEach(el=>{
 
     // thumbs -> hero
     const hero=document.getElementById('heroPhoto');
-    const thumbs=document.querySelectorAll('#photoThumbs img');
-    thumbs.forEach(th=>th.addEventListener('click',()=>{
-      thumbs.forEach(x=>x.classList.remove('active'));
-      th.classList.add('active');
-      hero.src=th.dataset.full; hero.alt=th.alt;
-    }));
-
-    // lightbox ao clicar na imagem principal
-    hero.addEventListener('click',()=>{
-      const overlay=document.createElement('div');
-      overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.85);display:grid;place-items:center;z-index:2000';
-      overlay.addEventListener('click',()=>overlay.remove());
-      const img=document.createElement('img'); img.src=hero.src; img.alt=hero.alt; img.style.maxWidth='92vw'; img.style.maxHeight='92vh'; img.style.borderRadius='12px';
-      overlay.appendChild(img); document.body.appendChild(overlay);
-    });
+const thumbsWrap=document.getElementById('photoThumbs');
+function addThumb(src, alt){
+  const im=document.createElement('img');
+  im.src = CDN+src; im.alt = alt||'Foto do imóvel'; im.dataset.full = CDN+src;
+  thumbsWrap.appendChild(im); return im;
+}
+// carrega as 20 melhores
+BEST20.forEach((f,i)=>{
+  const t = addThumb(f);
+  if(i===0){ t.classList.add('active'); }
+});
+// ação ver mais -> carrega o resto
+const btnVerMais=document.getElementById('btnVerMais');
+if(btnVerMais){ btnVerMais.addEventListener('click',()=>{
+  MORE.forEach(f=> addThumb(f)); btnVerMais.remove();
+});}
+// thumbs -> hero
+function bindThumbs(){
+  const thumbs=document.querySelectorAll('#photoThumbs img');
+  thumbs.forEach(th=>th.addEventListener('click',()=>{
+    thumbs.forEach(x=>x.classList.remove('active'));
+    th.classList.add('active'); hero.src=th.dataset.full; hero.alt=th.alt;
+  }));
+}
+const mo=new MutationObserver(bindThumbs); mo.observe(thumbsWrap,{childList:true}); bindThumbs();
+// lightbox ao clicar na imagem principal
+hero.addEventListener('click',()=>{
+  const overlay=document.createElement('div');
+  overlay.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.85);display:grid;place-items:center;z-index:2000';
+  overlay.addEventListener('click',()=>overlay.remove());
+  const img=document.createElement('img'); img.src=hero.src; img.alt=hero.alt; img.style.maxWidth='92vw'; img.style.maxHeight='92vh'; img.style.borderRadius='12px';
+  overlay.appendChild(img); document.body.appendChild(overlay);
+});
+// botão vídeo no topo (abre link externo)
+const VIDEO_URL='https://www.youtube.com/watch?v=cZu-4nE2fuo';
+const btnVideo=document.getElementById('btnAbrirVideo'); if(btnVideo){ btnVideo.href=VIDEO_URL; }
   })();
   </script>
 </body>
