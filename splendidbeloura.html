@@ -7,7 +7,7 @@
   <title>Apartamento T3 com Jardim Privativo no Splendid Beloura | 406 m² | €1.079.000 | Ana Lima</title>
 
   <!-- SEO base -->
-  <meta name="description" content="Exclusivo T3 com 406 m², grandes terraços (93 m²) e jardim privativo, no condomínio Splendid Beloura. Piscina, ginásio, segurança 24h. Marque visita com Ana Lima." />
+  <meta name="description" content="Exclusivo T3 com 406 m², 93 m² de terraços e jardim privativo, no condomínio Splendid Beloura. Piscina, ginásio, segurança 24h. Marque visita com Ana Lima." />
   <link rel="canonical" href="https://analimaconsultora.pt/splendid-beloura-t3" />
   <meta name="theme-color" content="#f3efe7" />
 
@@ -31,23 +31,27 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
+  <!-- Styles (aplicadas as melhorias do prompt) -->
   <style>
-/* Quiet Luxury — base */
+/* ===== Base (Quiet Luxury) ===== */
 :root{
   --beige:#f3efe7; --bg:var(--beige); --bg-alt:var(--beige); --panel:var(--beige);
   --ink:#171614; --ink-2:#3b3936; --muted:#7b756f; --muted-2:#958f88; --gold:#c7b299;
-  --ring:rgba(0,0,0,.10); --radius:18px; --container:1200px; --shadow:0 14px 36px rgba(0,0,0,.08);
+  --ring:rgba(0,0,0,.10); --radius:12px; --container:1200px; --shadow:0 14px 36px rgba(0,0,0,.08);
 }
 *,*::before,*::after{box-sizing:border-box}
 html,body{margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
 a{color:inherit; text-decoration:none}
 img{max-width:100%; height:auto; display:block}
 .container{width:92%; max-width:var(--container); margin-inline:auto}
-.btn{display:inline-flex; align-items:center; justify-content:center; gap:.6rem; padding:.9rem 1.15rem; border-radius:999px; border:1px solid rgba(0,0,0,.5); background:transparent; color:var(--ink); transition:all .2s ease}
+@media (min-width:1440px){ .container{max-width:1280px} }
+
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:.6rem; padding:.9rem 1.1rem; border-radius:999px; border:1px solid rgba(0,0,0,.5); background:transparent; color:var(--ink); transition:all .2s ease}
 .btn:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
 .btn.primary{background:var(--gold); color:#1b1b1b; border-color:var(--gold)}
 .btn.ghost{background:transparent; border:1px solid var(--ring)}
 .btn.xl{padding:1rem 1.4rem; font-weight:600}
+
 header{position:sticky; top:0; z-index:30; backdrop-filter:saturate(160%) blur(6px); background:rgba(243,239,231,.75); border-bottom:1px solid var(--ring)}
 .nav{display:flex; align-items:center; justify-content:space-between; padding:.8rem 0}
 .brand{font-family:"Cormorant Garamond",serif; font-weight:600; letter-spacing:.5px; font-size:1.3rem}
@@ -60,9 +64,7 @@ nav a:hover{background:rgba(0,0,0,.05)}
 .hero{position:relative; min-height:72vh; display:grid; place-items:center; overflow:hidden; background:var(--bg); margin:0}
 .hero-image{position:relative}
 .hero-bg{position:absolute; inset:0; z-index:0}
-.hero-bg::after{content:""; position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(243,239,231,.70) 0%, rgba(243,239,231,.92) 70%, var(--beige) 100%);
-}
+.hero-bg::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(243,239,231,.70) 0%, rgba(243,239,231,.92) 70%, var(--beige) 100%);}
 .hero-slide{position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transition:opacity .8s ease}
 .hero-slide.active{opacity:1}
 .hero-dots{position:absolute; z-index:2; bottom:16px; left:50%; transform:translateX(-50%); display:flex; gap:8px}
@@ -77,35 +79,27 @@ p.lead{font-size:1.06rem; color:var(--ink-2)}
 section{padding:64px 0; background:var(--bg-alt); margin:0}
 section.flush{padding-top:0}
 h2{font-family:"Cormorant Garamond",serif; font-size:clamp(1.6rem,3vw,2.3rem); margin:0 0 18px}
-.sub{color:var(--muted-2); margin-bottom:22px}
-.grid{display:grid; gap:18px}
-.grid.cols-3{grid-template-columns:repeat(3,1fr)}
-.grid.cols-2{grid-template-columns:repeat(2,1fr)}
-@media (max-width:1024px){.grid.cols-3{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:720px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr}}
+.sub{color:var(--muted-2); margin-bottom:22px; max-width:980px}
 
+/* Cards e vídeo */
 .card{background:var(--panel); border:1px solid var(--ring); border-radius:16px; overflow:hidden; box-shadow:var(--shadow); transition:transform .25s ease}
 .card:hover{transform:translateY(-4px)}
 .video-wrap{position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px; box-shadow:var(--shadow); background:var(--beige)}
 .video-wrap iframe{position:absolute; top:0; left:0; width:100%; height:100%}
 
-/* LP specifics */
+/* Fatos rápidos */
 .badge{display:inline-flex;gap:.5rem;align-items:center;padding:.35rem .6rem;border-radius:1rem;background:#efe9dc;color:#4a3f2b;font-size:.85rem}
 .price{font-size:clamp(1.4rem,2.2vw,2rem);font-weight:700}
 .facts{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0}
 .facts .chip{background:#f5f2eb;border:1px solid #e6e0d3;border-radius:999px;padding:.35rem .6rem}
-.gallery img{aspect-ratio:4/3;object-fit:cover;width:100%;height:100%;border-radius:12px}
-.amenities{columns:2;column-gap:2rem}
-@media(max-width:800px){.amenities{columns:1}}
-.map-wrap iframe{width:100%;height:380px;border:0;border-radius:12px}
-.floating-cta{position:fixed;inset:auto 1rem 1rem auto;display:flex;gap:.6rem;z-index:50}
-.floating-cta .btn{box-shadow:0 8px 28px rgba(0,0,0,.15)}
-.showcase-grid{display:grid; grid-template-columns:2fr 1fr; gap:18px}
-@media(max-width:980px){.showcase-grid{grid-template-columns:1fr}}
+
+/* Showcase tipo portal */
+.showcase-grid{display:grid; grid-template-columns:2fr 1fr; gap:24px}
+@media(max-width:1100px){.showcase-grid{grid-template-columns:1fr}}
 .tabs{display:flex; gap:6px; margin-bottom:10px}
 .tab{padding:.6rem .9rem; border:1px solid var(--ring); border-bottom:none; border-radius:12px 12px 0 0; background:#efe9dc}
 .tab.active{background:#dccfbe; font-weight:600}
-.panel{border:1px solid var(--ring); border-radius:0 12px 12px 12px; padding:10px; background:var(--panel)}
+.panel{border:1px solid var(--ring); border-radius:0 12px 12px 12px; padding:12px; background:var(--panel)}
 .panel.hidden{display:none}
 .hero-media{position:relative; border-radius:12px; overflow:hidden; box-shadow:var(--shadow)}
 .hero-media img{width:100%; height:auto; display:block; cursor:zoom-in}
@@ -115,7 +109,36 @@ h2{font-family:"Cormorant Garamond",serif; font-size:clamp(1.6rem,3vw,2.3rem); m
 .thumbs img.active{border-color:#c7b299}
 .plan-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:10px}
 .plan-grid img{width:100%; border-radius:12px; border:1px solid var(--ring)}
+
+/* ===== Forms (refatorado, desktop-first) ===== */
+.form{width:100%}
+.form .fields{display:grid; gap:16px}
+@media (min-width:1024px){
+  .form .fields{grid-template-columns:1fr 1fr}
+  .form .field.full{grid-column:1 / -1}
+}
+.form .field{display:flex; flex-direction:column; gap:8px}
+.form label{font-size:.95rem; color:var(--muted)}
+.form input,.form select,.form textarea{
+  width:100%; height:48px; padding:0 14px; border-radius:12px;
+  border:1px solid var(--ring); background:rgba(255,255,255,.85); color:var(--ink);
+  font-size:1rem; line-height:1.2;
+}
+.form textarea{min-height:120px; height:auto; padding:12px 14px; resize:vertical}
+.form input:focus,.form select:focus,.form textarea:focus{outline:none; border-color:#c9c4bd; box-shadow:0 0 0 3px rgba(199,178,153,.18)}
+.form .actions{display:flex; gap:.6rem; flex-wrap:wrap; margin-top:10px}
+.form .btn.primary{min-width:140px}
+.form .hint{font-size:.85rem; color:var(--muted-2)}
+/* estados de erro (pode ser aplicado via JS/servidor) */
+.form .error input,.form .error select,.form .error textarea{border-color:#b65252; box-shadow:0 0 0 3px rgba(182,82,82,.15)}
+.form .error .hint{color:#b65252}
+
+/* Form lateral (limite visual) */
 .side-form{position:sticky; top:84px; height:fit-content}
+.side-form .card-body{padding:20px}
+@media (min-width:1100px){ .side-form{max-width:460px; margin-left:auto} }
+
+/* Footer / util */
 footer{padding:28px 0 60px; border-top:1px solid var(--ring); color:#4e4e4e; background:var(--beige)}
 .footer-inner{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; align-items:center}
 .whatsapp{position:fixed; right:18px; bottom:18px; z-index:60}
@@ -200,8 +223,9 @@ html{scroll-behavior:smooth}
 
   <!-- SHOWCASE (Galeria + Form lateral) -->
   <section id="showcase" class="container reveal">
-    <h2 style="margin-bottom:6px">Apartamento T3 com Jardim Privativo no Splendid Beloura</h2>
-    <p class="sub" style="margin-bottom:18px">€ 1.079.000 • 406 m² bruta • Terraços 93 m² • Jardim privativo • Box 2 carros</p>
+    <!-- 🔄 Sem repetição do título — usamos um subtítulo objetivo -->
+    <h2>Destaques do Imóvel</h2>
+    <p class="sub">406 m² (bruta) • 93 m² de terraços • Jardim privativo • Box 2 carros • Vistas Serra de Sintra</p>
 
     <div class="showcase-grid">
       <div>
@@ -217,7 +241,7 @@ html{scroll-behavior:smooth}
             <span class="corner-badge">Baixa de Preço</span>
           </div>
           <div class="thumbs" id="photoThumbs" role="list"></div>
-          <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:6px">
+          <div class="actions" style="margin-top:6px">
             <button id="btnVerMais" class="btn">Ver mais fotos</button>
             <a class="btn" target="_blank" rel="noopener" id="btnAbrirVideo">Ver vídeo no YouTube</a>
           </div>
@@ -237,28 +261,45 @@ html{scroll-behavior:smooth}
         </div>
       </div>
 
-      <aside class="side-form">
+      <aside class="side-form" aria-label="Pedido de contacto">
         <div class="card"><div class="card-body">
           <h3 style="margin:0 0 6px">Pedido de contacto</h3>
           <p class="meta" style="margin:0 0 12px">Resposta rápida • Fala com a Ana</p>
-          <form id="lead-side" action="https://formsubmit.co/analima@afinest.pt" method="POST" class="form">
+          <form id="lead-side" action="https://formsubmit.co/analima@afinest.pt" method="POST" class="form" novalidate>
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_subject" value="Lead – T3 Splendid Beloura (LP)"/>
             <input type="hidden" name="_template" value="box"/>
             <input type="hidden" name="_next" value="https://analimaconsultora.pt/splendid-beloura-t3#contactos"/>
-            <input type="text" name="_honey" style="display:none">
-            <div class="field"><label>Tipo de contacto</label>
-              <select name="assunto">
-                <option value="marcar_visita">Marcar visita</option>
-                <option value="visita_virtual">Marcar visita virtual</option>
-                <option value="mais_informacoes">Mais informações</option>
-              </select>
+            <input type="text" name="_honey" style="display:none" aria-hidden="true" tabindex="-1">
+
+            <div class="fields">
+              <div class="field">
+                <label for="assunto-side">Tipo de contacto</label>
+                <select id="assunto-side" name="assunto" aria-label="Tipo de contacto">
+                  <option value="marcar_visita">Marcar visita</option>
+                  <option value="visita_virtual">Marcar visita virtual</option>
+                  <option value="mais_informacoes">Mais informações</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="nome-side">Nome</label>
+                <input id="nome-side" name="nome" required aria-required="true" autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="tel-side">Telefone</label>
+                <input id="tel-side" name="telefone" inputmode="tel" autocomplete="tel" />
+              </div>
+              <div class="field">
+                <label for="email-side">E-mail</label>
+                <input id="email-side" name="email" type="email" required aria-required="true" autocomplete="email" />
+              </div>
+              <div class="field full">
+                <label for="msg-side">Mensagem</label>
+                <textarea id="msg-side" name="mensagem" rows="4" placeholder="Quando prefere visitar?"></textarea>
+              </div>
             </div>
-            <div class="field"><label>Nome</label><input name="nome" required></div>
-            <div class="field"><label>Telefone</label><input name="telefone"></div>
-            <div class="field"><label>E-mail</label><input name="email" type="email" required></div>
-            <div class="field full"><label>Mensagem</label><textarea name="mensagem" rows="4" placeholder="Quando prefere visitar?"></textarea></div>
-            <div style="display:flex; gap:.6rem; margin-top:10px; flex-wrap:wrap">
+
+            <div class="actions">
               <button class="btn primary" type="submit">Enviar</button>
               <a class="btn" href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20quero%20saber%20mais%20sobre%20o%20T3%20da%20Beloura" target="_blank" rel="noopener">WhatsApp</a>
             </div>
@@ -360,26 +401,41 @@ html{scroll-behavior:smooth}
     <p class="sub">Resposta rápida • Fala com a Ana</p>
     <div class="grid cols-2">
       <div class="card"><div class="card-body">
-        <form id="lead" action="https://formsubmit.co/analima@afinest.pt" method="POST" class="form">
+        <form id="lead" action="https://formsubmit.co/analima@afinest.pt" method="POST" class="form" novalidate>
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_subject" value="Lead – T3 Splendid Beloura (LP)">
           <input type="hidden" name="_template" value="box">
           <input type="hidden" name="_next" value="https://analimaconsultora.pt/splendid-beloura-t3#contactos">
-          <input type="text" name="_honey" style="display:none">
+          <input type="text" name="_honey" style="display:none" aria-hidden="true" tabindex="-1">
+
           <div class="fields">
-            <div class="field"><label for="nome">Nome</label><input name="nome" required /></div>
-            <div class="field"><label for="email">Email</label><input name="email" type="email" required /></div>
-            <div class="field"><label for="telefone">Telefone</label><input name="telefone" /></div>
-            <div class="field"><label for="assunto">Interesse</label>
-              <select name="assunto">
+            <div class="field">
+              <label for="nome">Nome</label>
+              <input id="nome" name="nome" required aria-required="true" autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required aria-required="true" autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="telefone">Telefone</label>
+              <input id="telefone" name="telefone" inputmode="tel" autocomplete="tel" />
+            </div>
+            <div class="field">
+              <label for="assunto">Interesse</label>
+              <select id="assunto" name="assunto" aria-label="Interesse">
                 <option value="marcar_visita">Marcar visita</option>
                 <option value="mais_informacoes">Pedir mais informações</option>
                 <option value="video_call">Videochamada</option>
               </select>
             </div>
-            <div class="field full"><label for="mensagem">Mensagem</label><textarea name="mensagem" rows="5" placeholder="Quando prefere visitar?"></textarea></div>
+            <div class="field full">
+              <label for="mensagem">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Quando prefere visitar?"></textarea>
+            </div>
           </div>
-          <div style="display:flex; gap:.6rem; flex-wrap:wrap; margin-top:8px">
+
+          <div class="actions">
             <button class="btn primary" type="submit">Enviar</button>
             <a class="btn" href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20quero%20visitar%20o%20T3%20da%20Beloura" target="_blank" rel="noopener">WhatsApp</a>
             <a class="btn" href="tel:+351962823794">Ligar</a>
@@ -534,6 +590,7 @@ html{scroll-behavior:smooth}
     const btnVideo=document.getElementById('btnAbrirVideo'); if(btnVideo){ btnVideo.href=VIDEO_URL; }
   </script>
 
+  <!-- Botão topo + WhatsApp -->
   <button class="btn to-top" id="toTop" aria-label="voltar ao topo">↑ Topo</button>
   <div class="whatsapp">
     <a href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20vi%20o%20site%20e%20quero%20falar" target="_blank" rel="noopener" data-track="whatsapp_click">WhatsApp</a>
