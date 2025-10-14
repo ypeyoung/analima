@@ -65,6 +65,15 @@
     @media(max-width:1024px){.cols-3{grid-template-columns:1fr 1fr}}
     @media(max-width:760px){.cols-2,.cols-3{grid-template-columns:1fr}}
 
+    /* ===== Formulário de Contato ===== */
+    .form .fields{display:grid;gap:12px}
+    .form .field{display:flex;flex-direction:column;gap:6px}
+    .form label{font-size:.93rem;color:#305775}
+    .form input,.form select,.form textarea{width:100%;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--ring);background:#fff;color:var(--ink);font-size:.95rem}
+    .form textarea{min-height:110px;height:auto;resize:vertical}
+    .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:#a9cbe0;box-shadow:0 0 0 3px rgba(137,188,217,.22)}
+    .form button{padding:10px 15px;border-radius:12px;background-color:var(--sea);color:white;border:none;}
+
     /* ===== Mapa Localização ===== */
     .map-wrap{border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
     .map-wrap iframe{width:100%;height:340px;border:0}
@@ -102,6 +111,9 @@
   <main class="hero">
     <div class="hero-bg">
       <div class="hero-slide active" style="background-image:url('https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg')"></div>
+      <!-- Mais imagens para o slide -->
+      <div class="hero-slide" style="background-image:url('https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3455-HDR.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3479-HDR.jpg')"></div>
     </div>
     <div class="hero-card container reveal">
       <div class="eyebrow">Quinta da Beloura • Sintra</div>
