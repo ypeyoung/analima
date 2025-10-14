@@ -63,16 +63,21 @@
     p.lead{font-size:1rem;color:var(--ink-2);margin:0 auto}
     .hero-ctas{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1rem;justify-content:center}
 
+    /* ===== Slide para Destaques do Imóvel ===== */
+    .slider-container{position:relative;width:100%;border-radius:12px;overflow:hidden}
+    .slider {display: flex;transition: transform 0.5s ease-in-out}
+    .slider img {width:100%;height:auto;object-fit:cover}
+    .slider-nav {display: flex;justify-content: center;gap:15px;margin-top:10px;}
+    .slider-nav button{background-color:var(--sea);border:none;padding:.6rem 1rem;color:white;border-radius:50%;cursor:pointer;transition:background .3s}
+    .slider-nav button:hover{background-color:var(--deep)}
+    
     /* === Galeria e Destaques === */
-    .showcase-grid{display:grid;grid-template-columns:minmax(580px,1fr)minmax(340px,420px);gap:24px;align-items:start}
-    @media(max-width:1100px){.showcase-grid{grid-template-columns:1fr}}
+    .showcase-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
     .hero-media{border-radius:12px;overflow:hidden}
     .hero-media img{width:100%;height:auto;max-height:44vh;object-fit:cover;border-radius:12px}
-    .corner-badge{position:absolute;left:0;top:0;transform:translate(-34%,34%)rotate(-45deg);background:#c54d4d;color:#fff;padding:.3rem 2.1rem;font-weight:700;box-shadow:var(--shadow)}
     .thumbs{display:flex;gap:10px;overflow:auto;padding:10px 2px}
     .thumbs img{width:100px;height:60px;object-fit:cover;border-radius:10px;border:2px solid transparent;cursor:pointer;flex:0 0 auto}
     .thumbs img.active{border-color:var(--sea)}
-    @media(max-width:760px){.thumbs img{width:92px;height:58px}}
 
     /* ===== Grids ===== */
     .grid{display:grid;gap:18px}
@@ -91,12 +96,6 @@
     .form input,.form select,.form textarea{width:100%;padding:.7rem .9rem;border-radius:12px;border:1px solid var(--ring);background:#fff;color:var(--ink);font-size:.95rem}
     .form textarea{min-height:110px;height:auto;resize:vertical}
     .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:#a9cbe0;box-shadow:0 0 0 3px rgba(137,188,217,.22)}
-    .side-form{position:sticky;top:80px;height:fit-content}
-    @media(max-width:1200px){.side-form{position:static}}
-
-    /* ===== Plantas (contain) ===== */
-    .plan-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-    .plan-grid img{width:100%;background:#eef6fb;border:1px solid var(--ring);border-radius:12px;object-fit:contain;aspect-ratio:4/3;cursor:zoom-in}
 
     /* ===== Footer & mapa ===== */
     .map-wrap{margin-top:12px;border-radius:12px;overflow:hidden;border:1px solid var(--ring);box-shadow:var(--shadow)}
@@ -105,10 +104,6 @@
     .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
     .whatsapp{position:fixed;right:18px;bottom:18px;z-index:60}
     .whatsapp a{display:flex;align-items:center;gap:.6rem;background:#25d366;color:#fff;padding:.8rem 1rem;border-radius:999px;box-shadow:var(--shadow)}
-    .to-top{position:fixed;right:18px;bottom:78px;z-index:60;opacity:0;pointer-events:none;transition:opacity .2s}
-    .to-top.show{opacity:1;pointer-events:auto}
-    .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s, transform .6s}
-    .reveal.show{opacity:1;transform:translateY(0)}
 
     /* === HOTFIX layout desktop === */
     @media(min-width:1024px){
@@ -159,46 +154,19 @@
   <section id="showcase" class="container">
     <h2>Destaques do Imóvel</h2>
     <p class="sub">406 m² bruta • 93 m² de terraços • Jardim privativo • Box 2 carros • € 1.079.000</p>
-    <div class="showcase-grid">
-      <div>
-        <div class="card-body">
-          <div class="hero-media">
-            <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg" alt="Imóvel destaque">
-            <span class="corner-badge">Baixa de Preço</span>
-          </div>
-          <div class="thumbs">
-            <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3455-HDR.jpg" alt="Foto do imóvel">
-            <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3479-HDR.jpg" alt="Foto do imóvel">
-            <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3449-HDR.jpg" alt="Foto do imóvel">
-            <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3488-HDR.jpg" alt="Foto do imóvel">
-          </div>
-        </div>
+    
+    <div class="slider-container">
+      <div class="slider">
+        <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg" alt="Imagem do imóvel">
+        <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3455-HDR.jpg" alt="Imagem do imóvel">
+        <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3479-HDR.jpg" alt="Imagem do imóvel">
       </div>
-
-      <aside class="side-form">
-        <div class="card"><div class="card-body">
-          <h3>Pedido de contato</h3>
-          <p class="sub">Fala com a Ana</p>
-          <form action="https://formsubmit.co/analima@afinest.pt" method="POST" class="form">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_subject" value="Lead – Splendid Beloura LP">
-            <div class="fields">
-              <div class="field"><label>Nome</label><input name="nome" required></div>
-              <div class="field"><label>Email</label><input name="email" type="email" required></div>
-              <div class="field"><label>Telefone</label><input name="telefone"></div>
-              <div class="field"><label>Interesse</label>
-                <select name="assunto"><option>Marcar visita</option><option>Pedir informações</option></select>
-              </div>
-              <div class="field full"><label>Mensagem</label><textarea name="mensagem" rows="4"></textarea></div>
-            </div>
-            <div style="margin-top:10px;display:flex;gap:.6rem;flex-wrap:wrap">
-              <button class="btn primary" type="submit">Enviar</button>
-              <a class="btn" href="https://wa.me/351962823794" target="_blank">WhatsApp</a>
-            </div>
-          </form>
-        </div></div>
-      </aside>
+      <div class="slider-nav">
+        <button onclick="moveSlide(-1)">❮</button>
+        <button onclick="moveSlide(1)">❯</button>
+      </div>
     </div>
+
   </section>
 
   <!-- DETALHES -->
@@ -299,44 +267,14 @@
   <div class="whatsapp"><a href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20vi%20o%20site%20e%20quero%20falar" target="_blank" rel="noopener">WhatsApp</a></div>
 
   <script>
-    // Ano e rolagem suave
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const root = document.documentElement;
-    const atTop = () => { if (window.scrollY < 20) root.classList.add('at-top'); else root.classList.remove('at-top'); };
-    atTop(); window.addEventListener('scroll', atTop);
-
-    // Menu mobile
-    const menuBtn = document.querySelector('.menu-btn'), navList = document.querySelector('header nav ul');
-    if (menuBtn && navList) {
-      menuBtn.addEventListener('click', () => navList.classList.toggle('open'));
-      navList.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navList.classList.remove('open')));
+    let slideIndex = 0;
+    function moveSlide(step) {
+      const slides = document.querySelectorAll('.slider img');
+      slideIndex += step;
+      if (slideIndex < 0) slideIndex = slides.length - 1;
+      if (slideIndex >= slides.length) slideIndex = 0;
+      document.querySelector('.slider').style.transform = `translateX(-${slideIndex * 100}%)`;
     }
-
-    // Smooth anchors
-    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-      const id = a.getAttribute('href');
-      if (id.length > 1) {
-        e.preventDefault();
-        document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-      }
-    }));
-
-    // Reveal
-    const io = new IntersectionObserver(es => es.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('show')
-    }), { threshold: .12 });
-    document.querySelectorAll('section, .card, .hero-card').forEach(el => {
-      el.classList.add('reveal');
-      io.observe(el);
-    });
-
-    // Back to top
-    const toTop = document.getElementById('toTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 600) toTop.classList.add('show');
-      else toTop.classList.remove('show');
-    });
-    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 </body>
 </html>
