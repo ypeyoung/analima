@@ -11,6 +11,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+
   <style>
     :root {
       --sea: #89bcd9;
@@ -41,7 +42,7 @@
     .reveal { opacity: 0; transform: translateY(10px); transition: opacity .6s, transform .6s; }
     .reveal.show { opacity: 1; transform: translateY(0); }
 
-    /* === Efeitos no hero (com transição suave) === */
+    /* === Hero === */
     .hero { position: relative; min-height: 64vh; display: grid; place-items: center; overflow: hidden; transition: transform .5s ease-out; }
     .hero-card { position: relative; z-index: 2; text-align: center; width: min(720px, 92%); }
     .hero-card h1 { font-family: "Cormorant Garamond", serif; font-size: 2.4rem; margin: .5rem 0; color: #0d253f; transition: transform 1s ease-in-out; }
@@ -70,7 +71,6 @@
     /* === Footer === */
     footer { padding: 24px 0 56px; border-top: 1px solid var(--ring); color: #355976; background: var(--sand); }
     .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
-
   </style>
 </head>
 
@@ -128,6 +128,7 @@
         </div>
       </div>
 
+      <!-- FORM CONTACT -->
       <aside class="side-form">
         <div class="card"><div class="card-body">
           <h3>Pedido de contato</h3>
@@ -218,7 +219,7 @@
   <div class="whatsapp"><a href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20vi%20o%20site%20e%20quero%20falar" target="_blank" rel="noopener">WhatsApp</a></div>
 
   <script>
-    document.getElementById('year').textContent=new Date().getFullYear();
+    document.getElementById('year').textContent = new Date().getFullYear();
     document.querySelectorAll('.reveal').forEach(el => {
       const io = new IntersectionObserver(entries => {
         entries.forEach(entry => {
