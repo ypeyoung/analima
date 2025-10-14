@@ -58,12 +58,23 @@
     .card{border-radius:16px;padding:20px;box-shadow:var(--shadow);background-color:var(--panel);transition:transform .3s ease, box-shadow .3s ease}
     .card:hover{transform:scale(1.05);box-shadow:0 15px 30px rgba(0, 0, 0, 0.2)}
     .card-body{padding:1.2rem}
-    
-    .grid{display:grid;gap:20px}
-    .cols-2{grid-template-columns:repeat(2,1fr)}
-    .cols-3{grid-template-columns:repeat(3,1fr)}
-    @media(max-width:1024px){.cols-3{grid-template-columns:1fr 1fr}}
-    @media(max-width:760px){.cols-2,.cols-3{grid-template-columns:1fr}}
+
+    /* ===== Slide do Imóvel ===== */
+    .hero{position:relative;min-height:64vh;display:grid;place-items:center;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;z-index:0}
+    .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .7s}
+    .hero-slide.active{opacity:1}
+
+    /* ===== Galeria e Destaques ===== */
+    .showcase-grid{display:grid;grid-template-columns:minmax(580px,1fr)minmax(340px,420px);gap:24px;align-items:start}
+    .thumbs{display:flex;gap:10px;overflow:auto;padding:10px 2px}
+    .thumbs img{width:100px;height:60px;object-fit:cover;border-radius:10px;border:2px solid transparent;cursor:pointer;flex:0 0 auto}
+    .thumbs img.active{border-color:var(--sea)}
+    @media(max-width:760px){.thumbs img{width:92px;height:58px}}
+
+    /* ===== Mapa Localização ===== */
+    .map-wrap{border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+    .map-wrap iframe{width:100%;height:340px;border:0}
 
     /* ===== Formulário de Contato ===== */
     .form .fields{display:grid;gap:12px}
@@ -73,13 +84,6 @@
     .form textarea{min-height:110px;height:auto;resize:vertical}
     .form input:focus,.form select:focus,.form textarea:focus{outline:none;border-color:#a9cbe0;box-shadow:0 0 0 3px rgba(137,188,217,.22)}
     .form button{padding:10px 15px;border-radius:12px;background-color:var(--sea);color:white;border:none;}
-
-    /* ===== Mapa Localização ===== */
-    .map-wrap{border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
-    .map-wrap iframe{width:100%;height:340px;border:0}
-
-    /* ===== Footer ===== */
-    footer{padding:24px 0 56px;border-top:1px solid var(--ring);color:#355976;background:var(--sand)}
 
     /* === HOTFIX layout desktop === */
     @media(min-width:1024px){
@@ -107,11 +111,10 @@
     </div>
   </header>
 
-  <!-- SEÇÃO HERO -->
+  <!-- SEÇÃO HERO COM SLIDE -->
   <main class="hero">
     <div class="hero-bg">
       <div class="hero-slide active" style="background-image:url('https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg')"></div>
-      <!-- Mais imagens para o slide -->
       <div class="hero-slide" style="background-image:url('https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3455-HDR.jpg')"></div>
       <div class="hero-slide" style="background-image:url('https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3479-HDR.jpg')"></div>
     </div>
@@ -127,23 +130,20 @@
     </div>
   </main>
 
-  <!-- SEÇÃO DETALHES DO IMÓVEL -->
+  <!-- SEÇÃO DETALHES DO IMÓVEL COM SLIDE -->
   <section id="detalhes" class="container reveal">
     <h2>Detalhes do Imóvel</h2>
     <div class="grid cols-2">
       <div class="card">
         <div class="card-body">
-          <ul>
-            <li>Área bruta: 406 m²</li>
-            <li>Área útil: 178,29 m²</li>
-            <li>Terraços: 93 m²</li>
-            <li>Jardim privativo</li>
-            <li>Sala: 63 m² com lareira</li>
-            <li>Cozinha 16 m² equipada + despensa + lavandaria</li>
-            <li>2 suítes + 1 quarto</li>
-            <li>3 casas de banho completas</li>
-            <li>Box 2 carros + arrecadação</li>
-          </ul>
+          <div class="showcase-grid">
+            <div class="hero-media">
+              <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg" alt="Imagem do imóvel">
+            </div>
+            <div class="hero-media">
+              <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3455-HDR.jpg" alt="Imagem do imóvel">
+            </div>
+          </div>
         </div>
       </div>
       <div class="card">
@@ -244,6 +244,15 @@
     }, { threshold: 0.3 });
     
     revealElements.forEach(el => observer.observe(el));
+
+    // Slide da Hero Section
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-slide');
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 5000);
   </script>
 </body>
 </html>
