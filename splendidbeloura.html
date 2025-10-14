@@ -14,20 +14,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 
   <style>
+    /* === Paleta Azul do Mar === */
     :root {
-      --sea: #89bcd9;
-      --deep: #1e3a5f;
-      --sand: #f7f4ef;
-      --panel: #ffffff;
-      --ink: #222;
-      --ink-2: #4a4a4a;
-      --muted: #6e7c87;
+      --sea: #89bcd9;       /* azul piscina */
+      --deep: #1e3a5f;      /* azul profundo/acento */
+      --sand: #f7f4ef;      /* areia premium (fundo) */
+      --panel: #ffffff;     /* cartões */
+      --ink: #222;          /* texto principal */
+      --ink-2: #4a4a4a;     /* texto suave */
+      --muted: #6e7c87;     /* cinza-azulado */
       --ring: rgba(30,58,95,.12);
       --shadow: 0 12px 28px rgba(0,0,0,.06);
       --radius: 16px;
-      --container: 1140px;
+      --container: 1140px;  /* container máximo */
     }
 
+    /* ===== Reset básico e tipografia ===== */
     *,*::before,*::after{box-sizing:border-box}
     html,body{margin:0;background:var(--sand);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
     a{text-decoration:none;color:inherit}
