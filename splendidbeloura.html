@@ -148,34 +148,6 @@
       box-shadow: var(--shadow);
     }
 
-    /* === Cards e Galeria === */
-    .showcase-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-
-    .thumbs {
-      display: flex;
-      gap: 10px;
-      overflow: auto;
-      padding: 10px 2px;
-    }
-
-    .thumbs img {
-      width: 100px;
-      height: 60px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 2px solid transparent;
-      cursor: pointer;
-    }
-
-    .thumbs img.active {
-      border-color: var(--sea);
-    }
-
     /* === Footer === */
     footer {
       padding: 24px 0 56px;
@@ -291,14 +263,17 @@
     <div class="grid cols-2">
       <div class="card">
         <div class="card-body">
-          <div class="showcase-grid">
-            <div class="hero-media">
-              <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg" alt="Imagem do imóvel">
-            </div>
-            <div class="hero-media">
-              <img src="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3455-HDR.jpg" alt="Imagem do imóvel">
-            </div>
-          </div>
+          <ul>
+            <li>Área bruta: 406 m²</li>
+            <li>Área útil: 178,29 m²</li>
+            <li>Terraços: 93 m²</li>
+            <li>Jardim privativo</li>
+            <li>Sala: 63 m² com lareira</li>
+            <li>Cozinha 16 m² equipada + despensa + lavandaria</li>
+            <li>2 suítes + 1 quarto</li>
+            <li>3 casas de banho completas</li>
+            <li>Box 2 carros + arrecadação</li>
+          </ul>
         </div>
       </div>
       <div class="card">
