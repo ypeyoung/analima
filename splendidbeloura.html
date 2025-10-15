@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>T3 com Jardim Privativo no Splendid Beloura | Ana Lima Consultora</title>
-
   <meta name="description" content="T3 com 406 m², 93 m² de terraços e jardim privativo, vistas Serra de Sintra, box 2 carros, piscina e ginásio no Splendid Beloura. Marque visita." />
   <meta property="og:title" content="T3 com Jardim Privativo no Splendid Beloura | Ana Lima" />
   <meta property="og:description" content="Exclusivo apartamento T3 com jardim privativo no Splendid Beloura. Vistas Serra de Sintra, piscina e ginásio. €1.079.000." />
@@ -15,85 +14,69 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 
   <style>
-    /* === Paleta de Cores === */
     :root {
-      --sea: #89bcd9;      /* azul piscina */
-      --deep: #1e3a5f;     /* azul profundo/acento */
-      --sand: #f7f4ef;     /* areia premium (fundo) */
-      --panel: #ffffff;    /* cartões */
-      --ink: #222;         /* texto principal */
-      --ink-2: #4a4a4a;    /* texto suave */
-      --muted: #6e7c87;    /* cinza-azulado */
+      --sea: #2E8BC0; /* Azul do Mar */
+      --deep: #1e3a5f; /* azul profundo/acento */
+      --sand: #f7f4ef; /* areia premium (fundo) */
+      --panel: #ffffff; /* cartões */
+      --ink: #222; /* texto principal */
+      --muted: #6e7c87; /* cinza-azulado */
       --ring: rgba(30,58,95,.12);
       --shadow: 0 12px 28px rgba(0,0,0,.06);
       --radius: 16px;
       --container: 1140px;  /* container máximo */
     }
 
-    /* === Reset básico e Tipografia === */
     *,*::before,*::after { box-sizing: border-box; }
     html,body { margin: 0; background: var(--sand); color: var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; height: auto; display: block; }
     .container { width: min(92%, var(--container)); margin-inline: auto; }
 
-    /* === Header === */
     header {
       position: sticky;
       top: 0;
       z-index: 30;
-      background: rgba(247,244,239,0.65);
+      background: rgba(247,244,239,0.85);
       backdrop-filter: saturate(160%) blur(7px);
       border-bottom: 1px solid var(--ring);
       transition: background 0.3s;
     }
 
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: .7rem 0;
-    }
-
-    .brand {
-      font-family: "Cormorant Garamond", serif;
-      font-weight: 600;
-      font-size: 1.2rem;
-      color: var(--deep);
-    }
+    .nav { display: flex; justify-content: space-between; padding: .7rem 0; }
+    .brand { font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.5rem; color: var(--deep); }
 
     nav ul {
       display: flex;
-      gap: 1rem;
+      gap: 1.5rem;
       list-style: none;
       margin: 0;
       padding: 0;
     }
-
     nav a {
-      padding: .45rem .7rem;
+      padding: .6rem 1rem;
       border-radius: 999px;
+      font-weight: 600;
     }
 
     nav a:hover {
-      background: rgba(30,58,95,.08);
+      background: var(--sea);
+      color: #fff;
     }
 
-    /* === Slide no Header === */
+    /* Hero Section */
     .hero {
       position: relative;
-      min-height: 64vh;
+      min-height: 60vh;
       display: grid;
       place-items: center;
       overflow: hidden;
     }
-
     .hero-bg {
       position: absolute;
       inset: 0;
       z-index: 0;
     }
-
     .hero-bg::after {
       content: "";
       position: absolute;
@@ -101,17 +84,14 @@
       background: linear-gradient(180deg, rgba(247,244,239,0.45) 0%, rgba(247,244,239,0.85) 65%, var(--sand) 100%);
     }
 
-    .hero-slide {
+    .hero-video {
       position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      opacity: 0;
-      transition: opacity 1s;
-    }
-
-    .hero-slide.active {
-      opacity: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      object-fit: cover;
     }
 
     .hero-card {
@@ -125,8 +105,8 @@
       display: flex;
       gap: .7rem;
       flex-wrap: wrap;
-      margin-top: 1rem;
       justify-content: center;
+      margin-top: 1rem;
     }
 
     .hero-ctas .btn {
@@ -148,88 +128,79 @@
       box-shadow: var(--shadow);
     }
 
-    /* === Footer === */
-    footer {
-      padding: 24px 0 56px;
-      border-top: 1px solid var(--ring);
-      color: #355976;
-      background: var(--sand);
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    /* === Formulário de Contato === */
-    .form .fields {
+    /* Details Section */
+    .details-section {
       display: grid;
-      gap: 12px;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    .form .field {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
+    .details-card {
+      background: var(--panel);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
-    .form input,
-    .form select,
-    .form textarea {
-      width: 100%;
-      padding: .7rem .9rem;
-      border-radius: 12px;
+    .details-card h3 {
+      color: var(--deep);
+      margin-bottom: 1rem;
+    }
+
+    .details-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .details-card ul li {
+      margin: 0.5rem 0;
+      color: var(--muted);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 1rem;
+      border-radius: 8px;
       border: 1px solid var(--ring);
-      background: #fff;
+      font-size: 1rem;
       color: var(--ink);
-      font-size: .95rem;
     }
 
-    .form input:focus,
-    .form select:focus,
-    .form textarea:focus {
-      outline: none;
-      border-color: #a9cbe0;
-      box-shadow: 0 0 0 3px rgba(137,188,217,.22);
+    .contact-form button {
+      background: var(--sea);
+      color: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
     }
 
-    /* === Responsividade === */
-    @media(max-width: 1024px) {
-      .showcase-grid {
-        grid-template-columns: 1fr;
-      }
-      .thumbs {
-        flex-wrap: wrap;
-      }
+    .contact-form button:hover {
+      background: #007fa0;
     }
 
-    /* Animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(14px);
-      transition: opacity 0.6s, transform 0.6s;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .nav ul { flex-direction: column; }
+      .hero-card { width: 100%; }
     }
 
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="container nav">
       <a class="brand" href="#">Ana Lima Consultora</a>
       <nav>
         <ul>
-          <li><a href="#showcase">Galeria</a></li>
-          <li><a href="#detalhes">Detalhes</a></li>
+          <li><a href="#detalhes">Detalhes do Imóvel</a></li>
           <li><a href="#comodidades">Ficha Rápida</a></li>
           <li><a href="#localizacao">Localização</a></li>
           <li><a href="#contactos">Contactos</a></li>
@@ -238,117 +209,56 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <main class="hero">
-    <div class="hero-bg">
-      <div class="hero-slide active" style="background-image:url('https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3455-HDR.jpg')"></div>
-      <div class="hero-slide" style="background-image:url('https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3479-HDR.jpg')"></div>
-    </div>
-    <div class="hero-card container reveal">
-      <div class="eyebrow">Quinta da Beloura • Sintra</div>
+    <video class="hero-video" autoplay muted loop>
+      <source src="https://www.youtube.com/watch?v=uEIVKRa4na0" type="video/mp4">
+    </video>
+    <div class="hero-card container">
       <h1>T3 com Jardim Privativo no Splendid Beloura</h1>
-      <p class="lead">Apartamento de 2021 com 406 m² bruta, 93 m² de terraços e jardim privativo, vistas Serra de Sintra e box 2 carros.</p>
+      <p>Apartamento de 2021 com 406 m² bruta, 93 m² de terraços e jardim privativo, vistas Serra de Sintra e box 2 carros.</p>
       <div class="hero-ctas">
-        <a class="btn primary" href="#contactos">Marcar Visita</a>
-        <a class="btn" href="#showcase">Ver Galeria</a>
-        <a class="btn" href="https://www.youtube.com/watch?v=uEIVKRa4na0" target="_blank">Vídeo</a>
+        <a class="btn" href="#contactos">Marcar Visita</a>
+        <a class="btn" href="#detalhes">Ver Detalhes</a>
       </div>
     </div>
   </main>
 
-  <!-- SEÇÃO DETALHES DO IMÓVEL -->
-  <section id="detalhes" class="container reveal">
-    <h2>Detalhes do Imóvel</h2>
-    <div class="grid cols-2">
-      <div class="card">
-        <div class="card-body">
-          <ul>
-            <li>Área bruta: 406 m²</li>
-            <li>Área útil: 178,29 m²</li>
-            <li>Terraços: 93 m²</li>
-            <li>Jardim privativo</li>
-            <li>Sala: 63 m² com lareira</li>
-            <li>Cozinha 16 m² equipada + despensa + lavandaria</li>
-            <li>2 suítes + 1 quarto</li>
-            <li>3 casas de banho completas</li>
-            <li>Box 2 carros + arrecadação</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h3>Condomínio Splendid Beloura</h3>
-          <p class="sub">Piscina • Jardins • Ginásio • Segurança 24 h</p>
-          <p>Próximo a TASIS, CAISL, comércio e acessos rápidos a Lisboa, Cascais e Sintra.</p>
-        </div>
-      </div>
+  <!-- Detalhes do Imóvel -->
+  <section id="detalhes" class="container details-section">
+    <div class="details-card">
+      <h3>Detalhes do Imóvel</h3>
+      <ul>
+        <li>Área bruta: 406 m²</li>
+        <li>Área útil: 178,29 m²</li>
+        <li>Terraços: 93 m²</li>
+        <li>Jardim privativo</li>
+        <li>Sala: 63 m² com lareira</li>
+        <li>Cozinha 16 m² equipada</li>
+      </ul>
+    </div>
+    <div class="details-card">
+      <h3>Condomínio Splendid Beloura</h3>
+      <p>Piscina • Jardins • Ginásio • Segurança 24h</p>
     </div>
   </section>
 
-  <!-- SEÇÃO FICHA RÁPIDA -->
-  <section id="comodidades" class="container reveal">
-    <h2>Ficha Rápida</h2>
-    <div class="grid cols-3">
-      <article class="card">
-        <div class="card-body">
-          <h3>Divisões</h3>
-          <ul><li>3 Quartos (2 suítes)</li><li>3 Casas de banho</li><li>1 Sala (63 m²)</li></ul>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-body">
-          <h3>Áreas Principais</h3>
-          <ul><li>Quartos: 21 m² • 20 m² • 16 m²</li><li>WC: 3 × 4 m²</li></ul>
-        </div>
-      </article>
-      <article class="card">
-        <div class="card-body">
-          <h3>Condições</h3>
-          <ul><li>Venda: €1.079.000</li><li>Condomínio: €199/mês</li><li>IMI: €903/ano</li></ul>
-        </div>
-      </article>
-    </div>
+  <!-- Formulário de Contato -->
+  <section id="contactos" class="container">
+    <h2>Contato</h2>
+    <form class="contact-form" action="mailto:analima@afinest.pt" method="POST">
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+      <input type="email" name="email" placeholder="Seu E-mail" required>
+      <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+    <p>Ou entre em contato pelo WhatsApp: <a href="https://wa.me/+351962823794" target="_blank">+351 962823794</a></p>
   </section>
 
-  <!-- SEÇÃO LOCALIZAÇÃO -->
-  <section id="localizacao" class="container reveal">
-    <h2>Localização</h2>
-    <p class="sub">Quinta da Beloura • São Pedro de Penaferrim, Sintra</p>
-    <div class="map-wrap">
-      <iframe src="https://www.google.com/maps?q=Quinta%20da%20Beloura%2C%20Sintra&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen title="Mapa Quinta da Beloura"></iframe>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> Ana Lima Consultora • Quinta da Beloura, Sintra</div>
-      <div>Desenvolvido por <a href="https://www.highlevelmkt.com" target="_blank" rel="noopener">High Level Marketing</a></div>
+    <div class="container">
+      <p>© 2025 Ana Lima Consultora • Quinta da Beloura, Sintra</p>
     </div>
   </footer>
 
-  <script>
-    // Função de exibição suave (reveal)
-    document.querySelectorAll('.reveal').forEach((el) => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-          }
-        });
-      }, { threshold: 0.3 });
-      observer.observe(el);
-    });
-
-    // Slider no Header
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.hero-slide');
-    setInterval(() => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }, 5000);
-  </script>
 </body>
 </html>
