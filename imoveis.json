@@ -1,22 +1,13 @@
 [
   {
-    "titulo": "Moradia T4",
-    "zona": "Alcabideche",
-    "tipo": "Moradia T4",
-    "preco": "340.000",
-    "preco_num": 340000,
-    "meta": "Adroana • 169,6 m² • Terreno 315 m²",
-    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P27451464/Tphoto/ID48e0a201-0000-0500-0000-0000162e0e5d.jpg",
-    "badge": "Por Recuperar"
-  },
-  {
     "titulo": "Estúdio/Comercial 220 m²",
     "zona": "Cascais",
     "tipo": "Comercial T1",
     "preco": "390.000",
     "preco_num": 390000,
     "meta": "Cascais e Estoril • Usado • 220 m² bruta",
-    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26603765/Tphoto/IDf5f09501-0000-0500-0000-000015223544.jpg"
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26603765/Tphoto/IDf5f09501-0000-0500-0000-000015223544.jpg",
+    "status": "Disponível"
   },
   {
     "titulo": "Moradia T3 Térrea",
@@ -25,7 +16,8 @@
     "preco": "1.100.000",
     "preco_num": 1100000,
     "meta": "171 m² úteis • Terreno 1.418 m²",
-    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25439715/Tphoto/IDe32d8401-0000-0500-0000-000014008308.jpg"
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25439715/Tphoto/IDe32d8401-0000-0500-0000-000014008308.jpg",
+    "status": "Disponível"
   },
   {
     "titulo": "Arrecadação 25 m²",
@@ -34,7 +26,8 @@
     "preco": "29.000",
     "preco_num": 29000,
     "meta": "Segurança 24h • Centro Comercial",
-    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26803355/Tphoto/ID9bfc9801-0000-0500-0000-0000156002b3.jpg"
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26803355/Tphoto/ID9bfc9801-0000-0500-0000-0000156002b3.jpg",
+    "status": "Disponível"
   },
   {
     "titulo": "Apartamento T2",
@@ -43,7 +36,8 @@
     "preco": "570.000",
     "preco_num": 570000,
     "meta": "Amoreira • Condomínio com piscina",
-    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25522766/Tphoto/ID4e728501-0000-0500-0000-000015c0ecb7.jpg"
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25522766/Tphoto/ID4e728501-0000-0500-0000-000015c0ecb7.jpg",
+    "status": "Disponível"
   },
   {
     "titulo": "Apartamento T2 (Arrendamento)",
@@ -52,7 +46,8 @@
     "preco": "2.300/mês",
     "preco_num": 2300,
     "meta": "Amoreira • Condomínio com piscina",
-    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25522542/Tphoto/ID6e718501-0000-0500-0000-000015c0ec4a.jpg"
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P25522542/Tphoto/ID6e718501-0000-0500-0000-000015c0ec4a.jpg",
+    "status": "Disponível"
   },
   {
     "titulo": "Apartamento T3 + Jardim",
@@ -61,7 +56,8 @@
     "preco": "1.190.000",
     "preco_num": 1190000,
     "meta": "406 m² bruta • Renovado",
-    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P27220216/Tphoto/IDf8589f01-0000-0500-0000-000015e37f5f.jpg"
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P27220216/Tphoto/IDf8589f01-0000-0500-0000-000015e37f5f.jpg",
+    "status": "Disponível"
   },
   {
     "titulo": "T3+1 Duplex Lugares de Byron",
@@ -70,7 +66,8 @@
     "preco": "850.000",
     "preco_num": 850000,
     "meta": "241 m² bruta • Renovado",
-    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26802560/Tphoto/ID80f99801-0000-0500-0000-0000155cf85f.jpg"
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26802560/Tphoto/ID80f99801-0000-0500-0000-0000155cf85f.jpg",
+    "status": "Disponível"
   },
   {
     "titulo": "Terreno 10.680 m²",
@@ -79,7 +76,8 @@
     "preco": "6.000.000",
     "preco_num": 6000000,
     "meta": "Comércio e serviços",
-    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26905420/Tphoto/ID4c8b9a01-0000-0500-0000-0000157e1b09.jpg"
+    "img": "https://images.egorealestate.com/Z640x480/W2729/S5/C2729/P26905420/Tphoto/ID4c8b9a01-0000-0500-0000-0000157e1b09.jpg",
+    "status": "Disponível"
   },
   {
     "titulo": "Apartamento T2 na Alameda da Guia R/C -2 SUITES",
@@ -89,7 +87,8 @@
     "preco_num": 520000,
     "meta": "80 m² úteis • 95 m² bruta • 2 suítes",
     "img": "https://images.egorealestate.com/Z1280x960/S5/C2729/P28008614/Tphoto/IDa660ab01-0000-0500-0000-00001707be08.jpg",
-    "descricao": "Este elegante apartamento T2 em Cascais oferece uma localização premium, perto da Casa da Guia e das praias de Cascais e Guincho. Ideal para quem busca praticidade e qualidade de vida."
+    "descricao": "Este elegante apartamento T2 em Cascais oferece uma localização premium, perto da Casa da Guia e das praias de Cascais e Guincho. Ideal para quem busca praticidade e qualidade de vida.",
+    "status": "Disponível"
   },
   {
     "titulo": "Moradia T4 no Coração de Alcabideche",
@@ -99,6 +98,51 @@
     "preco_num": 720500,
     "meta": "Área útil 135 m² • Área bruta 154 m² • Garagem",
     "img": "https://images.egorealestate.com/Z1280x960/W2729/S5/C2729/P25544924/Tphoto/IDdcc88501-0000-0500-0000-00001428321b.jpg",
-    "descricao": "Apresento-lhe uma moradia T4 de dois andares, no coração de Alcabideche, numa das zonas mais calmas e acolhedoras da região. A propriedade possui um enorme terraço de 160 m², com espaço para um jardim e até mesmo uma piscina."
+    "descricao": "Apresento-lhe uma moradia T4 de dois andares, no coração de Alcabideche, numa das zonas mais calmas e acolhedoras da região. A propriedade possui um enorme terraço de 160 m², com espaço para um jardim e até mesmo uma piscina.",
+    "status": "Vendido"
+  },
+  {
+    "titulo": "Luxuoso T3+1 na Prestigiada QUINTA DA BELOURA – Sintra",
+    "zona": "Sintra",
+    "tipo": "Apartamento T3+1",
+    "preco": "850.000",
+    "preco_num": 850000,
+    "meta": "241 m² bruta • Renovado",
+    "img": "https://images.egorealestate.com/Z1280x960/S5/C2729/P26802560/Tphoto/ID80f99801-0000-0500-0000-0000155cf85f.jpg",
+    "descricao": "Uma oportunidade única de viver com elegância e exclusividade. Modernizado e cuidadosamente projetado para proporcionar conforto e sofisticação.",
+    "status": "Vendido"
+  },
+  {
+    "titulo": "Moradia T5 luminosa, espaçosa e rodeada por um enorme jardim",
+    "zona": "Murches, Alcabideche, Cascais",
+    "tipo": "Moradia T5",
+    "preco": "6.175 €",
+    "preco_num": 6175,
+    "meta": "Luminosa, espaçosa, com jardim e piscina",
+    "img": "https://images.egorealestate.com/Z1280x960/S5/C2729/P26894845/Tphoto/IDfd619a01-0000-0500-0000-0000157a467f.jpg",
+    "descricao": "MORADIA T5 num dos melhores condomínios de Cascais! Totalmente mobilada e equipada, com grande jardim e piscina.",
+    "status": "Arrendado"
+  },
+  {
+    "titulo": "Apartamento T3 com Jardim Privativo no Prestigiado Condomínio Splendid Beloura",
+    "zona": "Beloura (São Pedro Penaferrim), S.Maria e S.Miguel, S.Martinho, S.Pedro Penaferrim, Sintra",
+    "tipo": "Apartamento T3",
+    "preco": "1.079.000",
+    "preco_num": 1079000,
+    "meta": "406 m² bruta • Renovado",
+    "img": "https://images.egorealestate.com/Z1280x960/S5/C2729/P27220216/Tphoto/IDf8589f01-0000-0500-0000-000015e37fa9.jpg",
+    "descricao": "Exclusivo Apartamento T3, 406 m2 com Jardim Privativo no Prestigiado Condomínio Beloura — Junto à TASIS Portugal.",
+    "status": "Disponível"
+  },
+  {
+    "titulo": "Pavilhão Industrial com Terreno na Terrugem - Sintra",
+    "zona": "Armés (Terrugem), São João das Lampas e Terrugem, Sintra",
+    "tipo": "Pavilhão Industrial",
+    "preco": "659.000",
+    "preco_num": 659000,
+    "meta": "Área útil: 508 m² + 200 m² | Terreno 6000 m²",
+    "img": "https://images.egorealestate.com/Z1280x960/S5/C2729/P27944094/Tphoto/ID9e64aa01-0000-0500-0000-000016e54ac2.jpg",
+    "descricao": "Oportunidade única para investimento ou instalação do seu negócio em ambiente natural, a poucos minutos do centro de Sintra.",
+    "status": "Disponível"
   }
 ]
