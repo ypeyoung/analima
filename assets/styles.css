@@ -1,18 +1,18 @@
-/* Quiet Luxury — BEGE EM TUDO + responsividade + form bonito */
-:root{
-  --beige:#f3efe7;        /* cor única do site */
-  --bg:var(--beige);
-  --bg-alt:var(--beige);  /* containers com a MESMA cor */
-  --panel:var(--beige);   /* cartões também bege (sem “caixas brancas”) */
-  --ink:#171614;
-  --ink-2:#3b3936;
-  --muted:#7b756f;
-  --muted-2:#958f88;
-  --gold:#c7b299;         /* acento */
-  --ring:rgba(0,0,0,.10);
-  --radius:18px;
-  --container:1200px;
-  --shadow:0 14px 36px rgba(0,0,0,.08);
+/* Quiet Luxury — Azul do Mar, Piscina, Praia, Cor de Rico */
+:root {
+  --beige: #f3efe7; /* cor clara original */
+  --bg: #b2ebf2; /* Azul de piscina/claro */
+  --bg-alt: #b2ebf2; /* fundo alternativo azul piscina */
+  --panel: #b2ebf2; /* painel azul piscina */
+  --ink: #0d2f56; /* Azul escuro (rico) */
+  --ink-2: #2a3d6d; /* Azul intermediário */
+  --muted: #5b758b; /* Azul acinzentado */
+  --muted-2: #4a5d71; /* Azul mais escuro */
+  --gold: #ffd700; /* Cor dourada (rico) */
+  --ring: rgba(0,0,0,.10);
+  --radius: 18px;
+  --container: 1200px;
+  --shadow: 0 14px 36px rgba(0,0,0,.08);
 }
 
 /* Reset básico */
