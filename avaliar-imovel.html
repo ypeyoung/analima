@@ -3,45 +3,41 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Avalie O Seu Imóvel Em 48h — Cascais | Ana Lima Consultora</title>
+  <title>T3 com Jardim Privativo no Splendid Beloura | Ana Lima Consultora</title>
 
-  <meta name="description" content="Avaliação gratuita e confidencial do seu imóvel em Cascais, Estoril e Beloura. Receba uma análise em 48h e um plano de angariação premium, com foco em valor e velocidade."/>
-  <link rel="icon" href="https://analimaconsultora.pt/wp-content/uploads/cropped-Ana_Lima-01-removebg-preview.png" sizes="any"/>
+  <meta name="description" content="T3 com 406 m², 93 m² de terraços e jardim privativo, vistas Serra de Sintra, box 2 carros, piscina e ginásio no Splendid Beloura. Marque visita." />
+  <meta property="og:title" content="T3 com Jardim Privativo no Splendid Beloura | Ana Lima" />
+  <meta property="og:description" content="Exclusivo apartamento T3 com jardim privativo no Splendid Beloura. Vistas Serra de Sintra, piscina e ginásio. €1.079.000." />
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
 
-  <!-- CSS CRÍTICO (cores alteradas para Azul do Mar, Piscina, Praia, Cor de Rico) -->
   <style>
     :root {
-      --beige: #f3efe7;        /* cor clara original */
-      --bg: #b2ebf2;           /* Azul de piscina/claro */
-      --bg-alt: #b2ebf2;       /* fundo alternativo azul piscina */
-      --panel: #ffffffcc;      /* painéis levemente leitosos */
-      --ink: #0d2f56;          /* Azul escuro (rico) */
-      --ink-2: #2a3d6d;        /* Azul intermediário */
-      --muted: #5b758b;        /* Azul acinzentado */
-      --muted-2: #4a5d71;      /* Azul mais escuro */
-      --gold: #ffd700;         /* Cor dourada (rico) */
-      --ring: rgba(0,0,0,.10);
-      --radius: 18px;
-      --container: 1200px;
-      --shadow: 0 14px 36px rgba(0,0,0,.08);
+      --sea: #2E8BC0; /* Azul do Mar */
+      --deep: #1e3a5f; /* azul profundo/acento */
+      --sand: #f7f4ef; /* areia premium (fundo) */
+      --panel: #ffffff; /* cartões */
+      --ink: #222; /* texto principal */
+      --muted: #6e7c87; /* cinza-azulado */
+      --ring: rgba(30,58,95,.12);
+      --shadow: 0 12px 28px rgba(0,0,0,.06);
+      --radius: 16px;
+      --container: 1140px;  /* container máximo */
     }
 
-    /* Reset básico */
     *,*::before,*::after { box-sizing: border-box; }
-    html,body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
-    img { max-width: 100%; display: block; height: auto; }
-    a { color: inherit; text-decoration: none; }
-    .container { width: 92%; max-width: var(--container); margin-inline: auto; }
+    html,body { margin: 0; background: var(--sand); color: var(--ink); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { width: min(92%, var(--container)); margin-inline: auto; }
 
     /* Botões */
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: .6rem; padding: .9rem 1.15rem; border-radius: 999px; border: 1px solid rgba(0,0,0,.5); background: transparent; color: var(--ink); transition: all .2s ease; cursor: pointer; }
     .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-    .btn.primary { background: var(--gold); color: #1b1b1b; border-color: var(--gold); }
+    .btn.primary { background: var(--sea); color: #fff; border-color: var(--sea); }
 
     /* Topbar minimal */
     .lp-topbar { padding: 10px 0; border-bottom: 1px solid var(--ring); background: rgba(243,239,231,.78); backdrop-filter: blur(6px); position: sticky; top: 0; z-index: 20; }
@@ -49,11 +45,11 @@
     .lp-brand { font-family: "Cormorant Garamond", serif; font-weight: 600; letter-spacing: .3px; }
     .lp-actions { display: flex; gap: 8px; flex-wrap: wrap; }
 
-    /* Hero (mesmo mood da home) */
+    /* Hero */
     .hero { position: relative; background: var(--bg); margin: 0; overflow: hidden; }
     .hero-image::before {
       content: ""; position: absolute; inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1600&auto=format&fit=crop');
+      background-image: url('https://cdn.jsdelivr.net/gh/ypeyoung/analima@main/images/_7IV3497-HDR.jpg');
       background-size: cover; background-position: center; filter: saturate(105%);
       z-index: 0;
     }
@@ -63,72 +59,89 @@
       z-index: 1;
     }
     .hero-inner { position: relative; z-index: 2; min-height: 86vh; display: grid; place-items: center; padding: 42px 0; }
-    .hero-card { width: 100%; }
-    .eyebrow { font-size: .9rem; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
-    h1 { font-family: "Cormorant Garamond", serif; font-size: clamp(2.1rem,5vw,3.6rem); line-height: 1.08; margin: .4rem 0 1rem; }
-    .lead { font-size: 1.06rem; color: var(--ink-2); margin: 0 0 14px; }
-
-    /* Grade principal (texto + formulário + “porquê”) */
-    .grid-hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 28px; align-items: start; }
-    @media (max-width:980px) { .grid-hero { grid-template-columns: 1fr; } }
-
-    .panel { background: var(--panel); border: 1px solid var(--ring); border-radius: 16px; padding: 16px; box-shadow: var(--shadow); }
-    .kpills { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 16px; }
-    .pill { border: 1px solid var(--ring); border-radius: 999px; padding: .5rem .8rem; background: rgba(255,255,255,.55); }
-
-    /* Form */
-    form, .form { width: 100%; }
-    .form .fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .form .field { display: flex; flex-direction: column; gap: 6px; }
-    .form .field.full { grid-column: 1/-1; }
-    .form label { font-size: .9rem; color: var(--muted); }
-    form input, form select, form textarea {
-      width: 100%; padding: 1rem; border-radius: 12px; border: 1px solid var(--ring);
-      background: rgba(255,255,255,.9); color: var(--ink); font-size: 1rem;
+    .hero-card { width: 100%; text-align: center; }
+    .hero-card h1 {
+      font-family: "Cormorant Garamond", serif; font-size: 3rem; margin-bottom: 1rem; color: #fff;
     }
-    form input:focus, form select:focus, form textarea:focus {
-      outline: none; border-color: #c9c4bd; box-shadow: 0 0 0 3px rgba(199,178,153,.18);
-    }
-    @media (max-width:720px) { .form .fields { grid-template-columns: 1fr; } }
-
-    /* Secções comuns */
-    section { padding: 56px 0; background: var(--bg-alt); }
-    .zones { display: flex; gap: 8px; flex-wrap: wrap; }
-    .steps { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
-    @media (max-width:980px) { .steps { grid-template-columns: 1fr; } }
-    .step { background: var(--panel); border: 1px solid var(--ring); border-radius: 16px; padding: 16px; box-shadow: var(--shadow); }
-    .step .n { font-weight: 700; color: var(--muted-2); margin-bottom: 6px; }
-    .testi { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
-    @media (max-width:980px) { .testi { grid-template-columns: 1fr; } }
-    .quote { background: var(--panel); border: 1px solid var(--ring); border-radius: 16px; padding: 16px; box-shadow: var(--shadow); }
-    .quote .who { color: var(--muted); }
-    .faq { display: grid; gap: 12px; }
-    .faq details { background: var(--panel); border: 1px solid var(--ring); border-radius: 14px; padding: 14px; box-shadow: var(--shadow); }
-    .faq summary { cursor: pointer; font-weight: 600; }
-    .faq summary::-webkit-details-marker { display: none; }
-
-    /* Contactos + mapa */
-    .grid-2 { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; }
-    @media (max-width:900px) { .grid-2 { grid-template-columns: 1fr; } }
-    .map-wrap { border-radius: 14px; overflow: hidden; border: 1px solid var(--ring); box-shadow: var(--shadow); }
-    .map-wrap iframe { width: 100%; height: 300px; display: block; }
-
-    /* Footer */
-    footer { padding: 28px 0 60px; border-top: 1px solid var(--ring); color: #4e4e4e; background: var(--bg); }
-    .footer-inner { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; align-items: center; }
-    .footer-credits { font-size: .9rem; color: #5a5754; }
-    .footer-credits a { text-decoration: underline; color: inherit; }
-
-    /* CTA flutuante (mobile) */
-    @media (max-width:640px) {
-      .floating-cta { position: fixed; left: 0; right: 0; bottom: 0; background: rgba(243,239,231,.94);
-        border-top: 1px solid var(--ring); padding: 10px; z-index: 80; }
-      .floating-cta .container { display: flex; gap: 10px; justify-content: center; }
-      body { padding-bottom: 68px; } /* espaço para a barra não cobrir conteúdo */
+    .hero-card p {
+      font-size: 1.25rem; margin-bottom: 1.5rem; color: #fff;
     }
 
-    /* Suavidade */
-    html { scroll-behavior: smooth; }
+    .hero-ctas {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+    }
+
+    .hero-ctas .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .55rem; padding: .8rem 1.05rem;
+      border-radius: 999px; background: var(--sea); border: 1px solid var(--sea); color: #0d2a43; font-weight: 600;
+      transition: all .2s;
+    }
+
+    .hero-ctas .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+
+    /* Detalhes Section */
+    .details-section {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .details-card {
+      background: var(--panel);
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .details-card h3 {
+      color: var(--deep);
+      margin-bottom: 1rem;
+    }
+
+    .details-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .details-card ul li {
+      margin: 0.5rem 0;
+      color: var(--muted);
+    }
+
+    /* Formulário de Contato */
+    .contact-form {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--ring);
+      font-size: 1rem;
+      color: var(--ink);
+    }
+
+    .contact-form button {
+      background: var(--sea);
+      color: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .contact-form button:hover {
+      background: #007fa0;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .nav ul { flex-direction: column; }
+      .hero-card { width: 100%; }
+    }
+
   </style>
 </head>
 <body>
@@ -149,201 +162,52 @@
   <main class="hero hero-image">
     <div class="hero-inner">
       <div class="hero-card container">
-        <div class="eyebrow">Cascais • Estoril • Beloura</div>
-        <h1>Avalie O Seu Imóvel Em 48h</h1>
-        <p class="lead">Análise de mercado real, estratégia de preço e um plano de angariação premium — discreto, rápido e orientado a valor.</p>
-
-        <div class="kpills">
-          <span class="pill">Estudo comparativo</span>
-          <span class="pill">Plano de marketing</span>
-          <span class="pill">Foto • Vídeo • Drone</span>
-          <span class="pill">Captação qualificada</span>
+        <h1>T3 com Jardim Privativo no Splendid Beloura</h1>
+        <p>Apartamento de 2021 com 406 m² bruta, 93 m² de terraços e jardim privativo, vistas Serra de Sintra e box 2 carros.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#contactos">Marcar Visita</a>
+          <a class="btn" href="#detalhes">Ver Detalhes</a>
         </div>
-
-        <!-- Grid: Form + Porquê -->
-        <div class="grid-hero" style="margin-top:14px">
-          <div class="panel">
-            <h3 style="margin:0 0 8px">Pedido De Avaliação</h3>
-            <form id="leadLP" action="https://formsubmit.co/analima@afinest.pt" method="POST" class="form">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_subject" value="Avaliação — LP Angariação (Ana Lima)">
-              <input type="hidden" name="_template" value="box">
-              <input type="hidden" name="_next" value="https://ypeyoung.github.io/analima/#contactos">
-              <input type="text" name="_honey" style="display:none">
-              <input type="hidden" name="utm_source" id="utm_source">
-              <input type="hidden" name="utm_medium" id="utm_medium">
-              <input type="hidden" name="utm_campaign" id="utm_campaign">
-              <input type="hidden" name="utm_content" id="utm_content">
-              <input type="hidden" name="page_url" id="page_url">
-
-              <div class="fields">
-                <div class="field"><label>Nome</label><input name="nome" required/></div>
-                <div class="field"><label>Email</label><input type="email" name="email" required/></div>
-                <div class="field"><label>Telefone</label><input name="telefone"/></div>
-                <div class="field"><label>Zona</label>
-                  <select name="zona">
-                    <option value="Cascais">Cascais</option>
-                    <option value="Estoril">Estoril</option>
-                    <option value="Beloura">Beloura</option>
-                    <option value="Alcabideche">Alcabideche</option>
-                    <option value="Outra">Outra</option>
-                  </select>
-                </div>
-                <div class="field"><label>Tipo De Imóvel</label>
-                  <select name="tipo">
-                    <option>Apartamento</option>
-                    <option>Moradia</option>
-                    <option>Terreno</option>
-                    <option>Comercial</option>
-                  </select>
-                </div>
-                <div class="field"><label>Tipologia</label>
-                  <select name="tipologia">
-                    <option>T0</option><option>T1</option><option>T2</option>
-                    <option>T3</option><option>T4</option><option>T5+</option>
-                  </select>
-                </div>
-                <div class="field full"><label>Observações</label>
-                  <textarea name="mensagem" rows="4" placeholder="Ex.: estado, áreas, garagens, vista, urgência…"></textarea>
-                </div>
-                <div class="field full" style="display:flex; gap:8px; align-items:flex-start">
-                  <input id="consent" type="checkbox" required style="margin-top:.35rem">
-                  <label for="consent" style="font-size:.92rem; color:var(--muted)">
-                    Concordo em ser contactado(a) por email/telefone para a finalidade desta avaliação. Os meus dados não serão partilhados com terceiros.
-                  </label>
-                </div>
-              </div>
-
-              <button class="btn primary" type="submit">Pedir Avaliação</button>
-              <div class="lead" style="margin:.6rem 0 0; font-size:.95rem; color:var(--muted)">Resposta rápida no mesmo dia útil.</div>
-            </form>
-          </div>
-
-          <div class="panel">
-            <h3 style="margin:0 0 8px">Porque Connosco?</h3>
-            <p class="lead" style="margin:0 0 8px">Estratégia sob medida e execução de alto padrão — sem complicação.</p>
-            <ul style="margin:0 0 10px; padding-left:18px">
-              <li>Posicionamento de preço com base em dados locais</li>
-              <li>Apresentação premium (foto editorial, vídeo e drone)</li>
-              <li>Landing e tráfego pago segmentados por zona/tipologia</li>
-              <li>Follow-up de leads com processos claros</li>
-            </ul>
-            <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-              <a class="btn" href="../blog/">Ver Dicas No Blog</a>
-              <a class="btn" href="../#imoveis">Ver Imóveis</a>
-              <a class="btn primary" href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20quero%20avaliar%20o%20meu%20im%C3%B3vel" target="_blank" rel="noopener">WhatsApp</a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </main>
 
-  <!-- Zonas -->
-  <section>
-    <div class="container">
-      <h2 style="font-family:'Cormorant Garamond',serif; margin:0 0 12px">Zonas De Atuação</h2>
-      <p class="lead" style="margin:0 0 12px; color:var(--muted-2)">Foco local para avaliação precisa e angariação eficaz</p>
-      <div class="zones">
-        <span class="pill">Cascais</span>
-        <span class="pill">Estoril</span>
-        <span class="pill">Beloura</span>
-        <span class="pill">Alcabideche</span>
-        <span class="pill">Parede</span>
-        <span class="pill">Carcavelos</span>
-      </div>
+  <!-- Detalhes do Imóvel -->
+  <section id="detalhes" class="container details-section">
+    <div class="details-card">
+      <h3>Detalhes do Imóvel</h3>
+      <ul>
+        <li>Área bruta: 406 m²</li>
+        <li>Área útil: 178,29 m²</li>
+        <li>Terraços: 93 m²</li>
+        <li>Jardim privativo</li>
+        <li>Sala: 63 m² com lareira</li>
+        <li>Cozinha 16 m² equipada</li>
+      </ul>
+    </div>
+    <div class="details-card">
+      <h3>Condomínio Splendid Beloura</h3>
+      <p>Piscina • Jardins • Ginásio • Segurança 24h</p>
     </div>
   </section>
 
-  <!-- 3 passos -->
-  <section>
-    <div class="container">
-      <h2 style="font-family:'Cormorant Garamond',serif; margin:0 0 12px">Como Funciona</h2>
-      <div class="steps">
-        <div class="step"><div class="n">01 — Pedido</div>
-          <p>Envia o formulário com os dados do imóvel e disponibilidade.</p></div>
-        <div class="step"><div class="n">02 — Análise</div>
-          <p>Estudo comparativo e visita técnica para ajustar preço e estratégia.</p></div>
-        <div class="step"><div class="n">03 — Plano & Captação</div>
-          <p>Plano de marketing (foto, vídeo e <em>drone</em>), landing e captação qualificada.</p></div>
-      </div>
-    </div>
+  <!-- Formulário de Contato -->
+  <section id="contactos" class="container">
+    <h2>Contato</h2>
+    <form class="contact-form" action="mailto:analima@afinest.pt" method="POST">
+      <input type="text" name="nome" placeholder="Seu Nome" required>
+      <input type="email" name="email" placeholder="Seu E-mail" required>
+      <textarea name="mensagem" placeholder="Sua Mensagem" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+    <p>Ou entre em contato pelo WhatsApp: <a href="https://wa.me/+351962823794" target="_blank">+351 962823794</a></p>
   </section>
 
-  <!-- Prova social -->
-  <section>
-    <div class="container">
-      <h2 style="font-family:'Cormorant Garamond',serif; margin:0 0 12px">O Que Dizem Os Clientes</h2>
-      <div class="testi">
-        <div class="quote">
-          “Venda rápida e segura. A estratégia de preço e a apresentação fizeram toda a diferença.”
-          <div class="who">— J.M., Cascais</div>
-        </div>
-        <div class="quote">
-          “Transparência do início ao fim. Em uma semana já tínhamos visitas qualificadas.”
-          <div class="who">— R.A., Estoril</div>
-        </div>
-        <div class="quote">
-          “Avaliação realista e plano de marketing impecável. Recomendo sem reservas.”
-          <div class="who">— S.L., Beloura</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contactos + Mapa -->
-  <section>
-    <div class="container grid-2">
-      <div class="panel">
-        <h3 style="margin:0 0 8px">Contactos</h3>
-        <p><strong>Telefone</strong><br/>☎ +351 962 823 794</p>
-        <p><strong>Email</strong><br/>🖨 analima@afinest.pt</p>
-        <p><strong>Morada</strong><br/>Av. Gaspar Corte Real, 2750-164, Cascais, Portugal</p>
-        <div style="display:flex; gap:.6rem; flex-wrap:wrap">
-          <a class="btn" href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20quero%20avaliar%20o%20meu%20im%C3%B3vel" target="_blank" rel="noopener">WhatsApp</a>
-          <a class="btn" href="../blog/">Ir Para O Blog</a>
-        </div>
-      </div>
-      <div class="panel">
-        <div class="map-wrap">
-          <iframe src="https://www.google.com/maps?q=Av.%20Gaspar%20Corte%20Real%2C%202750-164%2C%20Cascais&output=embed"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> Ana Lima Consultora • Avaliação de Imóveis</div>
-      <div class="footer-credits">Desenvolvido por <a href="https://www.highlevelmkt.com" target="_blank" rel="noopener">High Level Marketing</a></div>
+    <div class="container">
+      <p>© 2025 Ana Lima Consultora • Quinta da Beloura, Sintra</p>
     </div>
   </footer>
 
-  <!-- CTA flutuante (mobile) -->
-  <div class="floating-cta">
-    <div class="container">
-      <a class="btn primary" href="#leadLP">Pedir Avaliação</a>
-      <a class="btn" href="https://wa.me/351962823794?text=Ol%C3%A1%20Ana%2C%20quero%20avaliar%20o%20meu%20im%C3%B3vel" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-  </div>
-
-  <!-- JS mínimo (ano + UTM) -->
-  <script>
-    // Ano
-    document.addEventListener('DOMContentLoaded', ()=> {
-      const y = document.getElementById('year'); if(y) y.textContent = new Date().getFullYear();
-    });
-    // Captura UTM e URL
-    (function(){
-      const p = new URLSearchParams(location.search);
-      const put = (id, key) => { const el = document.getElementById(id); if(el) el.value = p.get(key) || ''; };
-      put('utm_source','utm_source'); put('utm_medium','utm_medium');
-      put('utm_campaign','utm_campaign'); put('utm_content','utm_content');
-      const pu = document.getElementById('page_url'); if(pu) pu.value = location.href;
-    })();
-  </script>
 </body>
 </html>
